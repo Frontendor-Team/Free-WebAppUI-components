@@ -1,0 +1,28 @@
+import React from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+export default {
+  title: 'Component/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  decorators: [withDesign],
+  argTypes: {},
+};
+
+const Story = (args) => <{{pascalCase name}} {...args} />;
+
+export const Basic = Story.bind({});
+Basic.args = {
+  label: '{{pascalCase name}}',
+};
+
+{{#if imageUrl}}
+Basic.story = {
+  parameters: {
+    design: {
+      type: '{{imageType}}',
+      url: '{{imageUrl}}',
+    },
+  },
+};
+{{/if}}
