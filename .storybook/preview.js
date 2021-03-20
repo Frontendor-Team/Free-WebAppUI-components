@@ -1,12 +1,17 @@
+import React from 'react';
+
+import GlobalStyles from '../src/styles/globalStyles';
+
+// Global decorator to apply the styles to all stories
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  ),
+];
+
 export const parameters = {
-  actions: {
-    argTypesRegex: '^on.*',
-  },
-  backgrounds: {
-    values: [
-      { name: 'black', value: '#333' },
-      { name: 'grey', value: '#999' },
-      { name: 'white', value: '#fff' },
-    ],
-  },
+  actions: { argTypesRegex: '^on[A-Z].*' },
 };

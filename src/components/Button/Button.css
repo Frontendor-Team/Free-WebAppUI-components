@@ -1,0 +1,30 @@
+.button {
+  font-size: 0.8125rem;
+  padding: 0.6875rem 3.875rem;
+  border-radius: 0.3125rem;
+  border: solid 0.8px var(--clr-bright-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button--light {
+  background-color: var(--clr-white);
+  color: var(--clr-bright-blue);
+}
+
+.button--light:hover,
+.button--light:focus {
+  background-color: #035ae1;
+  color: var(--clr-white);
+}
+
+.button--dark {
+  background-color: var(--clr-bright-blue);
+  color: var(--clr-white);
+}
+
+.button--dark:hover,
+.button--dark:focus {
+  background-color: #035ae1;
+  color: var(--clr-white);
+}
