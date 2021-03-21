@@ -1,0 +1,33 @@
+.alert {
+  text-align: center;
+  background-color: #fff8e6;
+  padding: 0.6875rem 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.alert__icon {
+  fill: #ffb000;
+  margin-bottom: 0.4375rem;
+}
+
+.alert__text {
+  color: var(--clr-dark);
+  max-width: 15.125rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .alert {
+    display: flex;
+    justify-content: center;
+  }
+
+  .alert__icon {
+    margin: 0 0.4375rem 0 0;
+  }
+
+  .alert__text {
+    max-width: unset;
+    margin: 0;
+  }
+}
