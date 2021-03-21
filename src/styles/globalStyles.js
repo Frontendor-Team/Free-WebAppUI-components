@@ -44,14 +44,6 @@ img,
 picture {
   max-width: 100%;
   display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }`;
 
 export default GlobalStyles;
