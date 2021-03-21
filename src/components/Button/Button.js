@@ -3,7 +3,7 @@ import './Button.css';
 
 function Button({ variantColor, children, ...rest }) {
   return (
-    <button className={`button button--${variantColor}`} {...rest}>
+    <button className={`btn btn--${variantColor}`} {...rest}>
       {children}
     </button>
   );
