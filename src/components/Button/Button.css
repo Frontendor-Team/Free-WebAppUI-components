@@ -1,6 +1,6 @@
 .btn {
   font-size: 0.8125rem;
-  padding: 0.6875rem 0;
+  padding: 0.6875rem 3.875rem;
   border-radius: 0.3125rem;
   border: solid 0.8px var(--clr-bright-blue);
   cursor: pointer;
