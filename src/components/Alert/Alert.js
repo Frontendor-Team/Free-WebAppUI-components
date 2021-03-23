@@ -4,7 +4,7 @@ import './Alert.css';
 
 function Alert({ alertText }) {
   return (
-    <div className="alert">
+    <div className="alert container">
       <AlertIcon className="alert__icon" />
       <p className="alert__text">{alertText}</p>
     </div>

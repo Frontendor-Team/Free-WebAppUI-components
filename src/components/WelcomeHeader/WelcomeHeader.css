@@ -1,0 +1,51 @@
+.welcome {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+}
+
+.welcome__btn {
+  width: 100%;
+  max-width: 15.125rem;
+  justify-self: center;
+  padding: 0.6875rem 0;
+}
+
+.circled-arrow {
+  fill: currentColor;
+  vertical-align: sub;
+  margin-left: 0.6875rem;
+}
+
+.welcome__heading {
+  color: var(--clr-dark);
+  font-size: 1.3125rem;
+  line-height: 1.48;
+}
+
+.welcome__subheading {
+  color: var(--clr-steel);
+}
+
+@media screen and (min-width: 768px) {
+  .welcome {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'heading button' 'subheading subheading';
+    row-gap: 0.875rem;
+  }
+
+  .welcome__btn {
+    grid-area: button;
+    justify-self: end;
+  }
+
+  .welcome__heading {
+    grid-area: heading;
+  }
+
+  .welcome__subheading {
+    grid-area: subheading;
+  }
+}

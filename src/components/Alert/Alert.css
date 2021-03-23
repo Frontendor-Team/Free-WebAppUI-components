@@ -16,6 +16,12 @@
   margin: 0 auto;
 }
 
+@media screen and (min-width: 500px) {
+  .alert__text {
+    max-width: unset;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .alert {
     display: flex;
@@ -27,7 +33,6 @@
   }
 
   .alert__text {
-    max-width: unset;
     margin: 0;
   }
 }
