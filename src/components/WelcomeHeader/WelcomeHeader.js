@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import Alert from '../Alert/Alert';
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
-function WelcomeHeader() {
+function WelcomeHeader({ name }) {
   return (
     <div className="wrapper">
       <header className="welcome container">
@@ -13,7 +13,7 @@ function WelcomeHeader() {
           <Arrow className="circled-arrow" />
         </Button>
         <h1 className="welcome__heading">
-          Welcome, Ali
+          Welcome, {name}
           <span role="img" aria-label="hand waving">
             👋
           </span>

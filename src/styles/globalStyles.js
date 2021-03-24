@@ -24,7 +24,7 @@ html:focus-within {
 
 body {
   min-height: 100%;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.54;
@@ -46,8 +46,14 @@ picture {
   display: block;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 /* helper classes  */
-// Left and right margins
 .container {
   padding-left: 2.5rem;
   padding-right: 2.5rem;

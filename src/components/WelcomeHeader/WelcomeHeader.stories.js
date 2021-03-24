@@ -9,4 +9,4 @@ export default {
 const Template = (args) => <WelcomeHeader {...args} />;
 
 export const Welcome = Template.bind({});
-Welcome.args = {};
+Welcome.args = { name: 'Ali' };

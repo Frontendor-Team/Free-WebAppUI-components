@@ -1,0 +1,21 @@
+.nav__link {
+  text-transform: capitalize;
+  color: var(--clr-battleship-grey);
+  text-decoration: none;
+}
+
+.nav__button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 19px;
+  width: 19px;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
