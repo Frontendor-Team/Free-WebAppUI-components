@@ -16,9 +16,9 @@ function Navbar({ links }) {
         {showMenu ? <Close /> : <Hamburger className="hamburger" />}
       </button>
       <hr className="divider" />
-      <ul className={`nav__list ${showMenu && 'active'}`}>
+      <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
         {links.map((link, index) => (
-          <li key={index}>
+          <li className="nav__item" key={index}>
             <a href="/" className="nav__link">
               {link}
             </a>

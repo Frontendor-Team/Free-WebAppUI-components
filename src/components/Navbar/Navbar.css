@@ -21,16 +21,17 @@
 
 .nav__list {
   padding-top: 0.875rem;
-  display: grid;
-  grid-template-rows: auto;
-  row-gap: 0.625rem;
-  opacity: 0;
   transition: all 0.3s ease;
-
   position: fixed;
   left: 1rem;
-  transform: translateX(-87vw);
-  z-index: 3;
+}
+
+.nav__item {
+  padding-bottom: 0.625rem;
+}
+
+.nav__item:last-child {
+  padding-bottom: 0;
 }
 
 .nav__link {
@@ -46,4 +47,31 @@
 .active {
   opacity: 1;
   transform: translateX(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-12vw);
+}
+
+@media screen and (min-width: 997px) {
+  .nav__button,
+  hr {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    opacity: 1;
+    position: unset;
+    transform: translateX(0);
+  }
+
+  .nav__item {
+    padding-right: 2.25rem;
+    padding-bottom: 0;
+  }
+
+  .nav__item:last-child {
+    padding-right: 0;
+  }
 }
