@@ -13,9 +13,10 @@ function Navbar({ links }) {
   return (
     <nav>
       <button className="nav__button" onClick={toggleMenuVisibility}>
-        {showMenu ? <Close /> : <Hamburger />}
+        {showMenu ? <Close /> : <Hamburger className="hamburger" />}
       </button>
-      <ul className={`nav__list ${showMenu ? 'block' : 'hidden'}`}>
+      <hr className="divider" />
+      <ul className={`nav__list ${showMenu && 'active'}`}>
         {links.map((link, index) => (
           <li key={index}>
             <a href="/" className="nav__link">
