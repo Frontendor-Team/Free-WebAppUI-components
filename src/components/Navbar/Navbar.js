@@ -15,7 +15,7 @@ function Navbar({ links }) {
       <button className="nav__button" onClick={toggleMenuVisibility}>
         {showMenu ? <Close /> : <Hamburger className="hamburger" />}
       </button>
-      {/* <hr className="divider" /> */}
+      {/* <hr className="nav__divider" /> */}
       <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
         {links.map((link, index) => (
           <li className="nav__item" key={index}>

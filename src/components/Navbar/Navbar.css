@@ -5,7 +5,7 @@
   height: 1.1875rem;
   width: 1.1875rem;
   display: block;
-  margin-bottom: 0.875rem;
+  /* margin-bottom: 0.875rem; */
   margin-left: auto;
 }
 
@@ -50,15 +50,13 @@
 }
 
 @media screen and (min-width: 997px) {
-  .nav__button,
-  hr {
+  .nav__button {
     display: none;
   }
   .nav__list {
     display: flex;
     opacity: 1;
-    position: unset;
-    transform: translateX(0);
+    max-height: unset;
   }
 
   .nav__item {

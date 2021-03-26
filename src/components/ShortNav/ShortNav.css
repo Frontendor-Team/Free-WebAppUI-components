@@ -1,10 +1,10 @@
-.divider {
-  opacity: 0.5;
-}
-
 .short-nav {
   padding-top: 1.8125rem;
   padding-bottom: 0.25rem;
+}
+
+.short-nav__divider {
+  opacity: 0.25;
 }
 
 .short-nav__cta {
@@ -41,6 +41,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .short-nav {
+    padding-bottom: 0.6875rem;
+    padding-bottom: 0.875rem;
+  }
   .short-nav__header {
     display: flex;
     justify-content: space-between;
