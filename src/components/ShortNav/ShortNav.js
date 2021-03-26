@@ -11,9 +11,7 @@ function ShortNav() {
   return (
     <>
       <div className="wrapper">
-        <div className="container">
-          <SearchBar />
-        </div>
+        <SearchBar />
         <hr className="short-nav__divider" />
         <div className="short-nav container">
           <div className="short-nav__header">
@@ -26,7 +24,7 @@ function ShortNav() {
                 <Dots className="dots-icon" />
               </Button>
             </div>
-            <h1 className="short-nav__title">Main Library</h1>
+            <h1 className="title flex-order">Main Library</h1>
           </div>
           <Navbar links={['files', 'activities', 'overviews']} />
         </div>

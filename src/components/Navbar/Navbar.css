@@ -7,6 +7,7 @@
   display: block;
   /* margin-bottom: 0.875rem; */
   margin-left: auto;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -39,14 +40,16 @@
 
 .active {
   opacity: 1;
-  max-height: 999px;
-  transition: opacity 1s, max-height 0s;
+  max-height: 62.5rem; /*999px;*/
+  transition: opacity 0.75s, max-height 0s;
 }
 
 .hidden {
   opacity: 0.01;
-  max-height: 0px;
-  transition: opacity 1s, max-height 0s 0.5s;
+  max-height: 0;
+  transition: opacity 0.75s, max-height 0s 0.5s;
+  position: relative;
+  z-index: -2;
 }
 
 @media screen and (min-width: 997px) {
@@ -57,6 +60,7 @@
     display: flex;
     opacity: 1;
     max-height: unset;
+    z-index: unset;
   }
 
   .nav__item {

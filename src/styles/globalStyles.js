@@ -61,7 +61,16 @@ select {
 
 .wrapper {
   box-shadow: 0 4px 40px 0 rgb(0 0 0 / 10%);
-  max-width: 90rem //1440px
+  max-width: 90rem; //1440px
+}
+
+.title {
+  color: var(--clr-dark);
+  padding-top: 1.0625rem;
+  
+  @media screen and (min-width: 768px) {
+    order: -1;
+    padding-top: 0;
 }
 `;
 

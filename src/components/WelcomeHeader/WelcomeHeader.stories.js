@@ -2,7 +2,7 @@ import React from 'react';
 import WelcomeHeader from './WelcomeHeader';
 
 export default {
-  title: 'WelcomeHeader',
+  title: 'Top Style/WelcomeHeader',
   component: WelcomeHeader,
 };
 

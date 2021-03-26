@@ -2,7 +2,7 @@ import React from 'react';
 import ShortNav from './ShortNav';
 
 export default {
-  title: 'ShortNav',
+  title: 'Top Style/ShortNav',
   component: ShortNav,
 };
 

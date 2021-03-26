@@ -11,6 +11,7 @@
   color: var(--clr-bright-blue);
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .search__input::placeholder {

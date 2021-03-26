@@ -27,10 +27,10 @@
   vertical-align: sub;
 }
 
-.short-nav__title {
+/* .short-nav__title {
   color: var(--clr-dark);
   padding-top: 1.0625rem;
-}
+} */
 
 .dots-icon {
   fill: currentColor;
@@ -42,14 +42,14 @@
     padding-bottom: 0.6875rem;
     padding-bottom: 0.875rem;
   }
+
   .short-nav__header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.6875rem;
   }
 
-  .short-nav__title {
+  .flex-order {
     order: -1;
-    padding-top: 0;
   }
 }

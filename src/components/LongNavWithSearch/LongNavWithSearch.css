@@ -1,0 +1,11 @@
+.long-nav {
+  padding: 28px 0 5px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .long-nav__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.6875rem;
+  }
+}
