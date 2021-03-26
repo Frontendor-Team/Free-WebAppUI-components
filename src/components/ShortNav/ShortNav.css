@@ -1,0 +1,33 @@
+.divider {
+  opacity: 0.5;
+}
+
+.short-nav__cta {
+  display: flex;
+}
+
+.short-nav__btn--dark {
+  max-width: 11.8125rem;
+  padding: 0.6875rem 0;
+  margin-right: 0.75rem;
+  flex: 1;
+}
+
+.short-nav__btn--light {
+  max-width: 2.5625rem;
+  padding: 0.6875rem;
+}
+
+.add-icon {
+  margin-left: 0.6875rem;
+  vertical-align: sub;
+}
+
+.short-nav__heading {
+  color: var(--clr-dark);
+}
+
+.dots-icon {
+  fill: currentColor;
+  vertical-align: sub;
+}

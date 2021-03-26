@@ -22,8 +22,8 @@
 .nav__list {
   padding-top: 0.875rem;
   transition: all 0.3s ease;
-  position: fixed;
-  left: 1rem;
+  /* position: fixed; */
+  /* left: 1rem; */
 }
 
 .nav__item {
@@ -31,7 +31,7 @@
 }
 
 .nav__item:last-child {
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
 }
 
 .nav__link {
@@ -51,6 +51,7 @@
 
 .hidden {
   opacity: 0;
+  height: 0;
   transform: translateX(-12vw);
 }
 

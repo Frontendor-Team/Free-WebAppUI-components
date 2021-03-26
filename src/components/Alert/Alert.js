@@ -11,4 +11,8 @@ function Alert({ alertText }) {
   );
 }
 
+Alert.defaultProps = {
+  alertText: 'Your user count is at the upper limit. You should upgrade soon.',
+};
+
 export default Alert;

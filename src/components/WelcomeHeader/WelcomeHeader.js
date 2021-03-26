@@ -8,7 +8,7 @@ function WelcomeHeader({ name }) {
   return (
     <div className="wrapper">
       <header className="welcome container">
-        <Button variantColor="light" location="welcome__btn">
+        <Button color="light" usage="welcome__btn">
           Upgrade Plan
           <Arrow className="circled-arrow" />
         </Button>
