@@ -21,17 +21,10 @@
 
 .nav__list {
   padding-top: 0.875rem;
-  transition: all 0.3s ease;
-  /* position: fixed; */
-  /* left: 1rem; */
 }
 
 .nav__item {
   padding-bottom: 0.625rem;
-}
-
-.nav__item:last-child {
-  /* padding-bottom: 0; */
 }
 
 .nav__link {
@@ -46,13 +39,14 @@
 
 .active {
   opacity: 1;
-  transform: translateX(0);
+  max-height: 999px;
+  transition: opacity 1s, max-height 0s;
 }
 
 .hidden {
-  opacity: 0;
-  height: 0;
-  transform: translateX(-12vw);
+  opacity: 0.01;
+  max-height: 0px;
+  transition: opacity 1s, max-height 0s 0.5s;
 }
 
 @media screen and (min-width: 997px) {

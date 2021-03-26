@@ -16,16 +16,18 @@ function ShortNav() {
         </div>
         <hr className="divider" />
         <div className="short-nav container">
-          <div className="short-nav__cta">
-            <Button color="dark" usage="short-nav__btn--dark">
-              Add Files
-              <Add className="add-icon" />
-            </Button>
-            <Button color="light" usage="short-nav__btn--light">
-              <Dots className="dots-icon" />
-            </Button>
+          <div className="short-nav__header">
+            <div className="short-nav__cta">
+              <Button color="dark" usage="short-nav__btn--dark">
+                Add Files
+                <Add className="add-icon" />
+              </Button>
+              <Button color="light" usage="short-nav__btn--light">
+                <Dots className="dots-icon" />
+              </Button>
+            </div>
+            <h1 className="short-nav__title">Main Library</h1>
           </div>
-          <h1 className="short-nav__heading">Main Library</h1>
           <Navbar links={['files', 'activities', 'overviews']} />
         </div>
         <Alert />

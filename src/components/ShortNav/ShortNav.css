@@ -2,12 +2,17 @@
   opacity: 0.5;
 }
 
+.short-nav {
+  padding-top: 1.8125rem;
+  padding-bottom: 0.25rem;
+}
+
 .short-nav__cta {
   display: flex;
 }
 
 .short-nav__btn--dark {
-  max-width: 11.8125rem;
+  width: 11.8125rem;
   padding: 0.6875rem 0;
   margin-right: 0.75rem;
   flex: 1;
@@ -23,11 +28,26 @@
   vertical-align: sub;
 }
 
-.short-nav__heading {
+.short-nav__title {
   color: var(--clr-dark);
+  padding-top: 1.0625rem;
+
+  grid-area: heading;
 }
 
 .dots-icon {
   fill: currentColor;
   vertical-align: sub;
+}
+
+@media screen and (min-width: 768px) {
+  .short-nav__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.6875rem;
+  }
+
+  .short-nav__title {
+    order: -1;
+  }
 }
