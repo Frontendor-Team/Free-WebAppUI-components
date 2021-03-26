@@ -15,7 +15,6 @@
   width: 11.8125rem;
   padding: 0.6875rem 0;
   margin-right: 0.75rem;
-  flex: 1;
 }
 
 .short-nav__btn--light {
@@ -31,8 +30,6 @@
 .short-nav__title {
   color: var(--clr-dark);
   padding-top: 1.0625rem;
-
-  grid-area: heading;
 }
 
 .dots-icon {
@@ -53,5 +50,6 @@
 
   .short-nav__title {
     order: -1;
+    padding-top: 0;
   }
 }
