@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 import { ReactComponent as SearchIcon } from '../../assets/Search.svg';
 
-function SearchBar({ icon }) {
+function SearchBar() {
   return (
     <div className="search container">
       <SearchIcon className="search__icon" />

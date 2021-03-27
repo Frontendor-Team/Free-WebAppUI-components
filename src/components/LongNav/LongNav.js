@@ -14,7 +14,7 @@ function LongNav() {
             <Button color="light">
               Upgrade Plan <Arrow className="circled-arrow" />
             </Button>
-            <h1 className="title">Subscription</h1>
+            <h1 className="title flex-order">Subscription</h1>
           </div>
           <Navbar
             links={[

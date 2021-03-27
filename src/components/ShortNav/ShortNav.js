@@ -12,7 +12,7 @@ function ShortNav() {
     <>
       <div className="wrapper">
         <SearchBar />
-        <hr className="short-nav__divider" />
+        <hr className="divider" />
         <div className="short-nav container">
           <div className="short-nav__header">
             <div className="short-nav__cta">

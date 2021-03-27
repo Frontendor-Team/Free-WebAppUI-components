@@ -6,7 +6,4 @@ export default {
   component: LongNavWithSearch,
 };
 
-const Template = (args) => <LongNavWithSearch {...args} />;
-
-export const NavLinksWithSearch = Template.bind({});
-NavLinksWithSearch.args = {};
+export const NavLinksWithSearch = () => <LongNavWithSearch />;

@@ -53,7 +53,7 @@ select {
   font: inherit;
 }
 
-/* helper classes  */
+/* HELPER CLASSES  */
 .container {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -61,7 +61,7 @@ select {
 
 .wrapper {
   box-shadow: 0 4px 40px 0 rgb(0 0 0 / 10%);
-  max-width: 90rem; //1440px
+  max-width: 90rem; /* 1440px  */
 }
 
 .title {
@@ -69,8 +69,12 @@ select {
   padding-top: 1.0625rem;
   
   @media screen and (min-width: 768px) {
-    order: -1;
     padding-top: 0;
+  }
+}
+
+.divider {
+  opacity: 0.25;
 }
 `;
 

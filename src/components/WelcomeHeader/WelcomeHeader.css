@@ -6,10 +6,6 @@
   row-gap: 1rem;
 }
 
-.welcome__btn {
-  justify-self: center;
-}
-
 .circled-arrow {
   fill: currentColor;
   vertical-align: sub;
