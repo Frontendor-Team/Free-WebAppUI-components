@@ -22,7 +22,7 @@
   padding-bottom: 0.9375rem;
 
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease;
   height: auto;
 }
 
@@ -75,6 +75,10 @@
 
   .nav__item:last-child {
     padding-right: 0;
+  }
+
+  .nav__link:hover {
+    color: var(--clr-steel);
   }
 
   .underline {

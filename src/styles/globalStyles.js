@@ -61,8 +61,7 @@ select {
 
 .wrapper {
   box-shadow: 0 4px 40px 0 rgb(0 0 0 / 10%);
-  max-width: 90rem; /* 1440px  */
-  overflow-x: hidden;
+  max-width: 90rem; /* 1440px  */s
 }
 
 .title {
