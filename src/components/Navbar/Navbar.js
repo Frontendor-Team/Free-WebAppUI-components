@@ -17,7 +17,7 @@ function Navbar({ links }) {
         {showMenu ? <Close /> : <Hamburger className="hamburger" />}
       </button>
       <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
-        <hr className="divider" />
+        {/* <hr className="divider" /> */}
         {links.map((link, index) => (
           <li className="nav__item" key={index}>
             <a href="/" className="nav__link underline">

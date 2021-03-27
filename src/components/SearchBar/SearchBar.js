@@ -5,8 +5,8 @@ import { ReactComponent as SearchIcon } from '../../assets/Search.svg';
 function SearchBar() {
   return (
     <div className="search container">
-      <SearchIcon className="search__icon" />
       <input type="text" className="search__input" placeholder="Search" />
+      <SearchIcon className="search__icon" />
     </div>
   );
 }

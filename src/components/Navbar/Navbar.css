@@ -20,13 +20,10 @@
 .nav__list {
   padding-top: 0.875rem;
   padding-bottom: 0.9375rem;
-  position: relative;
-}
 
-.nav__list .divider {
-  width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  height: auto;
 }
 
 .nav__item {
@@ -48,17 +45,11 @@
 }
 
 .active {
-  opacity: 1;
-  max-height: 62.5rem; /*1000px;*/
-  transition: opacity 0.75s, max-height 0s;
+  max-height: 62.5rem;
 }
 
 .hidden {
-  opacity: 0.01;
   max-height: 0;
-  transition: opacity 0.75s, max-height 0s 0.5s;
-  position: relative;
-  z-index: -2;
 }
 
 @media screen and (min-width: 997px) {
@@ -73,13 +64,13 @@
     z-index: unset;
   }
 
-  .nav__list .divider {
-    display: none;
-  }
-
   .nav__item {
     padding-right: 2.25rem;
     padding-bottom: 0;
+  }
+
+  .nav__item:first-of-type {
+    padding-top: 0.625rem;
   }
 
   .nav__item:last-child {

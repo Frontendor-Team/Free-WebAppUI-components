@@ -5,6 +5,7 @@
 
 .search__icon {
   margin-right: 0.6875rem;
+  order: -1;
 }
 
 .search__input {
@@ -16,4 +17,8 @@
 
 .search__input::placeholder {
   color: var(--clr-steel);
+}
+
+.search__input:focus ~ svg {
+  fill: var(--clr-bright-blue);
 }
