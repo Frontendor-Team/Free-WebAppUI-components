@@ -1,0 +1,47 @@
+.left-header {
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 0.5625rem;
+  border: solid 1px #e5e7eb;
+  border-radius: 0.3125rem;
+}
+
+.left-header__logo {
+  background-color: #2d8eff;
+  padding: 0.5625rem;
+  border-radius: 0.1875rem;
+  display: grid;
+  place-items: center;
+  margin-right: 0.75rem;
+}
+
+.left-header__user-info {
+  font-size: 0.75rem;
+  align-self: center;
+}
+
+.username {
+  font-size: inherit;
+  color: var(--clr-dark);
+  margin-bottom: 0.125rem;
+}
+
+.page {
+  font-size: inherit;
+  color: var(--clr-battleship-grey);
+}
+
+.left-header__btn {
+  margin-left: auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+.unfold path {
+  stroke: var(--clr-steel);
+}
+
+.unfold:hover path {
+  stroke: var(--clr-battleship-grey);
+}
