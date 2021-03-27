@@ -62,11 +62,14 @@ select {
 .wrapper {
   box-shadow: 0 4px 40px 0 rgb(0 0 0 / 10%);
   max-width: 90rem; /* 1440px  */
+  overflow-x: hidden;
 }
 
 .title {
   color: var(--clr-dark);
   padding-top: 1.0625rem;
+  font-size: 1.3125rem;
+  line-height: 1.48;
   
   @media screen and (min-width: 768px) {
     padding-top: 0;

@@ -12,12 +12,6 @@
   margin-left: 0.6875rem;
 }
 
-.welcome__heading {
-  color: var(--clr-dark);
-  font-size: 1.3125rem;
-  line-height: 1.48;
-}
-
 .welcome__subheading {
   color: var(--clr-steel);
 }

@@ -1,11 +1,6 @@
 .short-nav {
   padding-top: 1.8125rem;
-  padding-bottom: 0.25rem;
 }
-
-/* .short-nav__divider {
-  opacity: 0.25;
-} */
 
 .short-nav__cta {
   display: flex;
@@ -15,6 +10,7 @@
   width: 11.8125rem;
   padding: 0.6875rem 0;
   margin-right: 0.75rem;
+  flex-grow: 1;
 }
 
 .short-nav__btn--light {
@@ -27,22 +23,12 @@
   vertical-align: sub;
 }
 
-/* .short-nav__title {
-  color: var(--clr-dark);
-  padding-top: 1.0625rem;
-} */
-
 .dots-icon {
   fill: currentColor;
   vertical-align: sub;
 }
 
 @media screen and (min-width: 768px) {
-  .short-nav {
-    padding-bottom: 0.6875rem;
-    padding-bottom: 0.875rem;
-  }
-
   .short-nav__header {
     display: flex;
     justify-content: space-between;

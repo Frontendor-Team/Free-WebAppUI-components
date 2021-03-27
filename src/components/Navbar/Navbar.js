@@ -13,13 +13,14 @@ function Navbar({ links }) {
   return (
     <nav>
       <button className="nav__button" onClick={toggleMenuVisibility}>
+        Menu
         {showMenu ? <Close /> : <Hamburger className="hamburger" />}
       </button>
-      {/* <hr className="nav__divider" /> */}
       <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
+        <hr className="divider" />
         {links.map((link, index) => (
           <li className="nav__item" key={index}>
-            <a href="/" className="nav__link">
+            <a href="/" className="nav__link underline">
               {link}
             </a>
           </li>

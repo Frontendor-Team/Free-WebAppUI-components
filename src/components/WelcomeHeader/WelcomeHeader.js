@@ -12,7 +12,7 @@ function WelcomeHeader({ name }) {
           Upgrade Plan
           <Arrow className="circled-arrow" />
         </Button>
-        <h1 className="welcome__heading">
+        <h1 className="title">
           Welcome, {name}
           <span role="img" aria-label="hand waving">
             👋

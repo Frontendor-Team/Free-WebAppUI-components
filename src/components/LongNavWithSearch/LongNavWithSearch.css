@@ -6,12 +6,12 @@
   .long-nav__header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0.6875rem;
+    /* padding-bottom: 0.6875rem; */
   }
 }
 
 @media screen and (min-width: 997px) {
-  .long-nav {
+  /* .long-nav {
     padding-bottom: 0.875rem;
-  }
+  } */
 }
