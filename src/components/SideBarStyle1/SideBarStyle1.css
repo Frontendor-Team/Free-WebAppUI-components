@@ -1,0 +1,43 @@
+.left-style__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  line-height: 1.54;
+  color: var(--clr-steel);
+  position: relative;
+}
+
+.avatar-img {
+  height: 2.0625rem;
+  width: 2.0625rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background-color: #48ab3a;
+  border: solid 1px white;
+  bottom: 0;
+  right: 4.3rem;
+}
+
+.left-style__btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.arrow-up {
+  fill: var(--clr-steel);
+}
