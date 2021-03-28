@@ -3,8 +3,7 @@ import './SideBarStyle1.css';
 import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
-// import { SidebarData } from './SidebarData';
-// import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
+import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 
 function SideBarStyle1() {
@@ -12,9 +11,6 @@ function SideBarStyle1() {
   const toggleSideBarVisibility = () => {
     setShowSidebar(!showSidebar);
   };
-
-  // const [subnav, setSubnav] = useState(false);
-  // const showSubnav = () => setSubnav(!subnav);
 
   return (
     <>
@@ -29,32 +25,11 @@ function SideBarStyle1() {
             {showSidebar ? <Close /> : <Hamburger className="hamburger" />}
           </button>
         </div>
-        <SubMenu />
-
-        {/* <ul>
+        <ul>
           {SidebarData.map((item, index) => {
-            return (
-              <li key={index}>
-                <a href="/" onClick={item.subNav && showSubnav}>
-                  {item.icon} <span>{item.text}</span>
-                </a>
-                <button onClick={showSubnav}>
-                  {item.subNav && <ArrowUp className="arrow-up" />}
-                </button>
-                {subnav &&
-                  item.subNav.map((item, index) => {
-                    return (
-                      <ul>
-                        <li key={index}>
-                          <a href="/">{item} </a>
-                        </li>
-                      </ul>
-                    );
-                  })}
-              </li>
-            );
+            return <SubMenu item={item} key={index} />;
           })}
-        </ul> */}
+        </ul>
       </nav>
     </>
   );

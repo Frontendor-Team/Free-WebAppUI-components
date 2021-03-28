@@ -38,6 +38,12 @@
   outline: none;
 }
 
+/* Submenu */
 .arrow-up {
   fill: var(--clr-steel);
+  transition: transform 0.2s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
