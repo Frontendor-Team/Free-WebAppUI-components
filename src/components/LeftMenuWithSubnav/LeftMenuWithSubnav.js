@@ -1,9 +1,9 @@
 import React from 'react';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
-import './MenuWithSubLevels.css';
+import './LeftMenuWithSubnav.css';
 
-function SidebarWithSubLevels({ sidebarData }) {
+function LeftMenuWithSubnav({ sidebarData }) {
   return (
     <div className="sidebar-wrapper">
       <div className="sidebar-header">
@@ -15,4 +15,4 @@ function SidebarWithSubLevels({ sidebarData }) {
   );
 }
 
-export default SidebarWithSubLevels;
+export default LeftMenuWithSubnav;

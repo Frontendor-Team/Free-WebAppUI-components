@@ -1,5 +1,5 @@
 import React from 'react';
-import LeftMenu from './LeftMenu';
+import LeftMenuWithSubnav from './LeftMenuWithSubnav';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -8,19 +8,24 @@ import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
 
 export default {
-  title: 'Left style/LeftMenu',
-  component: LeftMenu,
+  title: 'Left style/LeftMenuWithSubnav',
+  component: LeftMenuWithSubnav,
 };
 
-const Template = (args) => <LeftMenu {...args} />;
+const Template = (args) => <LeftMenuWithSubnav {...args} />;
 
-export const MenuRegular = Template.bind({});
-MenuRegular.args = {
+export const MenuLarge = Template.bind({});
+MenuLarge.args = {
   sidebarData: [
     {
       text: 'Overview',
       icon: <Overview />,
       link: '/overview',
+      subNav: [
+        { label: 'Analytics', path: '/analytics' },
+        { label: 'Company Benefits', path: '/company-benefits' },
+        { label: 'Time Tracking', path: '/time-tracking' },
+      ],
     },
     {
       text: 'Notes',
@@ -46,6 +51,14 @@ MenuRegular.args = {
       text: 'Settings',
       icon: <Settings />,
       link: '/settings',
+      subNav: [
+        { label: 'General', path: '/general' },
+        { label: 'Security', path: '/security' },
+        { label: 'Privacy', path: '/privacy' },
+        { label: 'Surveys', path: '/surveys' },
+        { label: 'Languages', path: '/languages' },
+        { label: 'Subscription', path: '/subscription' },
+      ],
     },
   ],
 };
