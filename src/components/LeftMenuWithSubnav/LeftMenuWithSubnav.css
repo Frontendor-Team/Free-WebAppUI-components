@@ -1,6 +1,6 @@
 .sidebar-wrapper {
   box-shadow: 0 8px 60px 0 rgb(0 0 0 / 15%);
-  background-color: #f8f8f9;
+  background-color: var(--clr-grayish-blue);
 }
 
 .sidebar-header {
@@ -10,6 +10,10 @@
 @media screen and (min-width: 997px) {
   .sidebar-wrapper {
     width: 16rem;
+
+    height: 50rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
   }
 
   .sidebar-header {

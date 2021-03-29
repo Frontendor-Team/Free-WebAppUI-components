@@ -49,10 +49,6 @@
   fill: currentColor;
 }
 
-/* .close-icon path {
-  fill: currentColor;
-} */
-
 .left-style__menu {
   overflow: hidden;
   transition: max-height 0.5s ease-out;
@@ -145,8 +141,9 @@
 
 @media screen and (min-width: 997px) {
   .left-style {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: var(--clr-grayish-blue);
   }
 
   .left-style__btn {
@@ -155,12 +152,13 @@
 
   .left-style__user {
     order: 2;
+    border-top: solid 1px var(--clr-light-grayish-blue);
   }
 
   .left-style__menu {
     max-height: unset;
-    overflow: unset;
-    margin-top: 7px;
+    padding-top: 0.4375rem;
+    position: relative;
   }
 
   /* Subnav.js */
@@ -187,11 +185,25 @@
     display: block;
   }
 
-  .rotate {
-    transform: rotate(180deg);
-  }
-
   .left-style__subnav {
     border: none;
+    width: 12.5rem;
+    position: absolute;
+    background-color: var(--clr-pale-gray);
+    transition: 0.4s ease;
+    right: -200px;
+
+    height: 100%;
+    top: 0;
+    border-left: solid 1px var(--clr-light-grayish-blue);
+  }
+
+  .open {
+    right: 0;
+    max-height: unset;
+  }
+
+  .closed {
+    max-height: unset;
   }
 }
