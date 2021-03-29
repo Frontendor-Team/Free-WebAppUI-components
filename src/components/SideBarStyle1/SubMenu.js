@@ -15,19 +15,21 @@ const SubMenu = ({ item }) => {
         {icon} <span className="menu-label">{text}</span>
         {item.subNav && <ArrowUp className={`arrow-up ${subnav ? '' : 'rotate'}`}></ArrowUp>}
       </a>
-      <ul className={`left-style__subnav ${subnav ? 'active' : 'hidden'}`}>
-        {subnav &&
-          subNav.map((subNavItem, index) => {
-            return (
-              <li className="subnav-item" key={index}>
-                {/* passing # instead of subNavItem.path for testing */}
-                <a href="#" className="subnav-link">
-                  {subNavItem.label}
-                </a>
-              </li>
-            );
-          })}
-      </ul>
+      {subNav && (
+        <ul className={`left-style__subnav ${subnav ? 'active' : 'hidden'}`}>
+          {subnav &&
+            subNav.map((subNavItem, index) => {
+              return (
+                <li className="subnav-item" key={index}>
+                  {/* passing # instead of subNavItem.path for testing */}
+                  <a href="#" className="subnav-link">
+                    {subNavItem.label}
+                  </a>
+                </li>
+              );
+            })}
+        </ul>
+      )}
     </li>
   );
 };

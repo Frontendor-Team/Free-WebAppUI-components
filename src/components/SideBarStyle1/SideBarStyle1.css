@@ -43,6 +43,12 @@
   outline: none;
 }
 
+.left-style__menu {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  height: auto;
+}
+
 /* Submenu.js */
 .menu-link {
   display: flex;
@@ -79,7 +85,7 @@
 .left-style__subnav {
   border-top: solid 1px var(--clr-light-grayish-blue);
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 1s ease;
   height: auto;
 }
 
@@ -104,6 +110,7 @@
   padding-left: 1rem;
 }
 
+.subnav-link:hover,
 .subnav-link:focus {
   outline: none;
   color: var(--clr-battleship-grey);

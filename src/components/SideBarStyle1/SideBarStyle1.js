@@ -24,7 +24,7 @@ function SideBarStyle1() {
           {showSidebar ? <Close /> : <Hamburger className="hamburger" />}
         </button>
       </div>
-      <ul>
+      <ul className={`left-style__menu ${showSidebar ? 'active' : 'hidden'}`}>
         {SidebarData.map((item, index) => {
           return <SubMenu item={item} key={index} />;
         })}
