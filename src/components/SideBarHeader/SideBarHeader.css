@@ -3,7 +3,7 @@
   font-size: 0.75rem;
   line-height: 1.5;
   padding: 0.5625rem;
-  border: solid 1px #e5e7eb;
+  border: solid 1px var(--clr-light-grayish-blue);
   border-radius: 0.3125rem;
 }
 
@@ -11,7 +11,7 @@
   background-color: #2d8eff;
   padding: 0.5625rem;
   border-radius: 0.1875rem;
-  display: grid;
+  display: flex;
   place-items: center;
   margin-right: 0.75rem;
 }

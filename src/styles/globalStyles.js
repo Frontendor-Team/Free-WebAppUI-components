@@ -16,6 +16,8 @@ html {
   --clr-steel: #88909b;
   --clr-dark: #101927;
   --clr-white: #ffffff;
+  --clr-pale-gray: #f3f4f5;
+  --clr-light-grayish-blue: #e5e7eb;
   }
 
 html:focus-within {
@@ -51,6 +53,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* HELPER CLASSES  */

@@ -2,7 +2,7 @@
   text-align: center;
   background-color: #fff8e6;
   padding: 0.6875rem 0;
-  border-top: 0.0625rem solid #e5e7eb;
+  border-top: 0.0625rem solid var(--clr-light-grayish-blue);
 }
 
 .alert__icon {
