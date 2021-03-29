@@ -1,9 +1,9 @@
 import React from 'react';
-import SideBarHeader from './SideBarHeader';
+import SidebarHeader from './SidebarHeader';
 
 export default {
-  title: 'Left Style/SideBarHeader',
-  component: SideBarHeader,
+  title: 'SidebarHeader',
+  component: SidebarHeader,
 };
 
-export const Header = () => <SideBarHeader />;
+export const Header = () => <SidebarHeader />;

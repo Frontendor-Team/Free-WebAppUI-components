@@ -1,0 +1,8 @@
+.sidebar-wrapper {
+  box-shadow: 0 8px 60px 0 rgb(0 0 0 / 15%);
+  background-color: #f8f8f9;
+}
+
+.sidebar-header {
+  padding: 0.8125rem 1.0625rem;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideBarHeader.css';
+import './SidebarHeader.css';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import { ReactComponent as Unfold } from '../../assets/Unfold.svg';
 

@@ -8,6 +8,7 @@
   align-items: center;
   background-color: transparent;
   padding: 0.6875rem 1.5rem;
+  /* padding: 0.6875rem 0.4375rem; */
 }
 
 .avatar {
@@ -41,6 +42,7 @@
   border: none;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 }
 
 .left-style__menu {

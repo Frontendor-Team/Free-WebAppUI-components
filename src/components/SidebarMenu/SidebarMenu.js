@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SideBarStyle1.css';
+import './SidebarMenu.css';
 import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';

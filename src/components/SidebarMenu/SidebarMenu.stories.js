@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBarStyle1 from './SideBarStyle1';
+import SidebarMenu from './SidebarMenu';
 
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
@@ -9,11 +9,11 @@ import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
 
 export default {
-  title: 'Left Style/SidebarMenu',
-  component: SideBarStyle1,
+  title: 'SidebarMenu',
+  component: SidebarMenu,
 };
 
-const Template = (args) => <SideBarStyle1 {...args} />;
+const Template = (args) => <SidebarMenu {...args} />;
 
 export const Menu = Template.bind({});
 Menu.args = {

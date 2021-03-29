@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
-import './SideBarStyle1.css';
+import './SidebarMenu.css';
 
 const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
