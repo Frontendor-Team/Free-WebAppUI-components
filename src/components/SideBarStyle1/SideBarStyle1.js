@@ -3,10 +3,10 @@ import './SideBarStyle1.css';
 import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
-import { SidebarData } from './SidebarData';
+// import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 
-function SideBarStyle1() {
+function SideBarStyle1({ sidebarData }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleSideBarVisibility = () => {
     setShowSidebar(!showSidebar);
@@ -25,7 +25,7 @@ function SideBarStyle1() {
         </button>
       </div>
       <ul className={`left-style__menu ${showSidebar ? 'active' : 'hidden'}`}>
-        {SidebarData.map((item, index) => {
+        {sidebarData.map((item, index) => {
           return <SubMenu item={item} key={index} />;
         })}
       </ul>
