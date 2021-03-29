@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuWithSubLevels from './MenuWithSubLevels';
+import LeftMenuWithSubnav from './LeftMenuWithSubnav';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -8,11 +8,11 @@ import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
 
 export default {
-  title: 'Left style/MenuWithSubLevels',
-  component: MenuWithSubLevels,
+  title: 'Left style/LeftMenuWithSubnav',
+  component: LeftMenuWithSubnav,
 };
 
-const Template = (args) => <MenuWithSubLevels {...args} />;
+const Template = (args) => <LeftMenuWithSubnav {...args} />;
 
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
