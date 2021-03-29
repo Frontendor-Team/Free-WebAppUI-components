@@ -3,10 +3,9 @@ import './SidebarMenu.css';
 import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
-// import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 
-function SideBarStyle1({ sidebarData }) {
+function SidebarMenu({ sidebarData }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleSideBarVisibility = () => {
     setShowSidebar(!showSidebar);
@@ -33,4 +32,4 @@ function SideBarStyle1({ sidebarData }) {
   );
 }
 
-export default SideBarStyle1;
+export default SidebarMenu;
