@@ -11,7 +11,7 @@
   background-color: #2d8eff;
   padding: 0.5625rem;
   border-radius: 0.1875rem;
-  display: grid;
+  display: flex;
   place-items: center;
   margin-right: 0.75rem;
 }

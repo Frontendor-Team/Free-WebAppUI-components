@@ -1,3 +1,7 @@
+.left-style {
+  background-color: var(--clr-pale-gray);
+}
+
 .left-style__user {
   display: flex;
   justify-content: space-between;

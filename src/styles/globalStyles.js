@@ -16,6 +16,7 @@ html {
   --clr-steel: #88909b;
   --clr-dark: #101927;
   --clr-white: #ffffff;
+  --clr-pale-gray: #f3f4f5;
   }
 
 html:focus-within {

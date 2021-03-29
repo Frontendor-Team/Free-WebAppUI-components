@@ -3,7 +3,7 @@ import './Navbar.css';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
 
-function Navbar({ links }) {
+function Navbar({ navItems }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenuVisibility = () => {
@@ -18,10 +18,10 @@ function Navbar({ links }) {
       </button>
       <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
         {/* <hr className="divider" /> */}
-        {links.map((link, index) => (
+        {navItems.map((navItem, index) => (
           <li className="nav__item" key={index}>
-            <a href="/" className="nav__link underline">
-              {link}
+            <a href={navItem.link} className="nav__link underline">
+              {navItem.label}
             </a>
           </li>
         ))}

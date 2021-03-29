@@ -10,24 +10,22 @@ const SubMenu = ({ item }) => {
 
   return (
     <li key={index}>
-      <a href="#">
+      {/* passing # instead of link for testing */}
+      <a href="#" onClick={subNav && showSubnav}>
         {icon} <span>{text}</span>
+        {item.subNav && (
+          <button>
+            <ArrowUp className={`arrow-up ${subnav ? '' : 'rotate'}`}></ArrowUp>
+          </button>
+        )}
       </a>
-      {item.subNav && (
-        <button>
-          <ArrowUp
-            onClick={subNav && showSubnav}
-            className={`arrow-up ${subnav ? '' : 'rotate'}`}
-          ></ArrowUp>
-        </button>
-      )}
       <ul>
         {subnav &&
           subNav &&
-          subNav.map((item, index) => {
+          subNav.map((subNavItem, index) => {
             return (
               <li key={index}>
-                <a href="#">{item}</a>
+                <a href={subNavItem.path}>{subNavItem.label}</a>
               </li>
             );
           })}
