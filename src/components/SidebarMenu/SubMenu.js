@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
+import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
+
 import './SidebarMenu.css';
 
 const SubMenu = ({ item }) => {
@@ -9,14 +11,17 @@ const SubMenu = ({ item }) => {
   const { index, icon, text, subNav } = item;
 
   return (
-    <li key={index}>
+    <li className="menu-item" key={index}>
       {/* passing # instead of link for testing */}
       <a href="#" onClick={subNav && showSubnav} className="menu-link">
         {icon} <span className="menu-label">{text}</span>
-        {item.subNav && <ArrowUp className={`arrow-up ${subnav ? '' : 'rotate'}`}></ArrowUp>}
+        {item.subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
+        {item.subNav && (
+          <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>
+        )}
       </a>
       {subNav && (
-        <ul className={`left-style__subnav ${subnav ? 'active' : 'hidden'}`}>
+        <ul className={`left-style__subnav ${subnav ? 'open' : 'closed'}`}>
           {subnav &&
             subNav.map((subNavItem, index) => {
               return (
