@@ -20,7 +20,7 @@ function SidebarMenu({ sidebarData }) {
           Account
         </div>
         <button className="left-style__btn" onClick={toggleSideBarVisibility}>
-          {showSidebar ? <Close className="close-icon" /> : <Hamburger className="hamburger" />}
+          {showSidebar ? <Close /> : <Hamburger className="hamburger" />}
         </button>
       </div>
       <ul className={`left-style__menu ${showSidebar ? 'open' : 'closed'} `}>
