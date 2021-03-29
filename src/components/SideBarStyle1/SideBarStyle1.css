@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  padding: 0.6875rem 1.5rem;
 }
 
 .avatar {
@@ -42,12 +43,69 @@
   outline: none;
 }
 
-/* Submenu */
+/* Submenu.js */
+.menu-link {
+  display: flex;
+  border-top: solid 1px var(--clr-light-grayish-blue);
+  padding: 0.6875rem 1.5rem;
+
+  color: var(--clr-steel);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--clr-battleship-grey);
+}
+
+.menu-link svg {
+  fill: currentColor;
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.menu-label {
+  margin-left: 0.75rem;
+}
+
 .arrow-up {
-  fill: var(--clr-steel);
   transition: transform 0.2s ease;
+  margin-left: auto;
 }
 
 .rotate {
   transform: rotate(180deg);
+}
+
+.left-style__subnav {
+  border-top: solid 1px var(--clr-light-grayish-blue);
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  height: auto;
+}
+
+.subnav-item {
+  padding: 0 1rem;
+  color: var(--clr-steel);
+}
+
+.subnav-item:first-child {
+  padding-top: 1.4375rem;
+}
+
+.subnav-item:last-child {
+  padding-bottom: 1.4375rem;
+}
+
+.subnav-link {
+  color: var(--clr-steel);
+  display: block;
+  padding-top: 0.6875rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1rem;
+}
+
+.subnav-link:focus {
+  outline: none;
+  color: var(--clr-battleship-grey);
+  background-color: var(--clr-light-grayish-blue);
 }

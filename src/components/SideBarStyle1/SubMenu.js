@@ -11,21 +11,19 @@ const SubMenu = ({ item }) => {
   return (
     <li key={index}>
       {/* passing # instead of link for testing */}
-      <a href="#" onClick={subNav && showSubnav}>
-        {icon} <span>{text}</span>
-        {item.subNav && (
-          <button>
-            <ArrowUp className={`arrow-up ${subnav ? '' : 'rotate'}`}></ArrowUp>
-          </button>
-        )}
+      <a href="#" onClick={subNav && showSubnav} className="menu-link">
+        {icon} <span className="menu-label">{text}</span>
+        {item.subNav && <ArrowUp className={`arrow-up ${subnav ? '' : 'rotate'}`}></ArrowUp>}
       </a>
-      <ul>
+      <ul className={`left-style__subnav ${subnav ? 'active' : 'hidden'}`}>
         {subnav &&
-          subNav &&
           subNav.map((subNavItem, index) => {
             return (
-              <li key={index}>
-                <a href={subNavItem.path}>{subNavItem.label}</a>
+              <li className="subnav-item" key={index}>
+                {/* passing # instead of subNavItem.path for testing */}
+                <a href="#" className="subnav-link">
+                  {subNavItem.label}
+                </a>
               </li>
             );
           })}

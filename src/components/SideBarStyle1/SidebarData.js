@@ -12,9 +12,9 @@ export const SidebarData = [
     icon: <Overview />,
     link: '/overview',
     subNav: [
-      { label: 'analytics', path: '/analytics' },
-      { label: 'company benefits', path: '/company-benefits' },
-      { label: 'time tracking', path: '/time-tracking' },
+      { label: 'Analytics', path: '/analytics' },
+      { label: 'Company Benefits', path: '/company-benefits' },
+      { label: 'Time Tracking', path: '/time-tracking' },
     ],
   },
   {
@@ -42,12 +42,12 @@ export const SidebarData = [
     icon: <Settings />,
     link: '/settings',
     subNav: [
-      { label: 'general', path: '/general' },
-      { label: 'security', path: '/security' },
-      { label: 'privacy', path: '/privacy' },
-      { label: 'surveys', path: '/surveys' },
-      { label: 'languages', path: '/languages' },
-      { label: 'subscription', path: '/subscription' },
+      { label: 'General', path: '/general' },
+      { label: 'Security', path: '/security' },
+      { label: 'Privacy', path: '/privacy' },
+      { label: 'Surveys', path: '/surveys' },
+      { label: 'Languages', path: '/languages' },
+      { label: 'Subscription', path: '/subscription' },
     ],
   },
 ];
