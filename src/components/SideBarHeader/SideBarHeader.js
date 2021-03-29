@@ -3,7 +3,7 @@ import './SidebarHeader.css';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import { ReactComponent as Unfold } from '../../assets/Unfold.svg';
 
-function SideBarHeader() {
+function SidebarHeader() {
   return (
     <div className="left-header">
       <div className="left-header__logo">
@@ -20,4 +20,4 @@ function SideBarHeader() {
   );
 }
 
-export default SideBarHeader;
+export default SidebarHeader;
