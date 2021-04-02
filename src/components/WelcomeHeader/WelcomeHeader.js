@@ -2,6 +2,7 @@ import React from 'react';
 import './WelcomeHeader.css';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
+import Title from '../Title/Title';
 import Alert from '../Alert/Alert';
 import Wrapper from '../Wrapper/Wrapper';
 
@@ -16,12 +17,12 @@ function WelcomeHeader({ name }) {
             Upgrade Plan
             <Arrow className="circled-arrow" />
           </Button>
-          <h1 className="title">
+          <Title>
             Welcome, {name}
             <span role="img" aria-label="hand waving">
               👋
             </span>
-          </h1>
+          </Title>
           <p className="welcome__subheading">
             You have to keep up the pace to accomplish your goals in time.
           </p>

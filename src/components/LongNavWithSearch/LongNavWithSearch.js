@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import Alert from '../Alert/Alert';
 import Container from '../Container/Container';
 import Wrapper from '../Wrapper/Wrapper';
-
+import Title from '../Title/Title';
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
 function LongNavWithSearch({ navItems }) {
@@ -18,7 +18,7 @@ function LongNavWithSearch({ navItems }) {
             <Button color="light">
               Upgrade Plan <Arrow className="circled-arrow" />
             </Button>
-            <h1 className="title flex-order">Subscription</h1>
+            <Title flexOrder="flex-order">Subscription</Title>
           </div>
           <Navbar navItems={navItems} />
         </div>

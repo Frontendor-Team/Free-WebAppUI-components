@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import Alert from '../Alert/Alert';
 import Container from '../Container/Container';
 import Wrapper from '../Wrapper/Wrapper';
+import Title from '../Title/Title';
 import { ReactComponent as Add } from '../../assets/Add.svg';
 import { ReactComponent as Dots } from '../../assets/Dots.svg';
 
@@ -26,7 +27,7 @@ function ShortNav({ navItems }) {
                 <Dots className="dots-icon" />
               </Button>
             </div>
-            <h1 className="title flex-order">Main Library</h1>
+            <Title flexOrder="flex-order">Main Library</Title>
           </div>
           <Navbar navItems={navItems} />
         </div>

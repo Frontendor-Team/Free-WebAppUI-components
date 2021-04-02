@@ -62,17 +62,6 @@ a {
 
 /* HELPER CLASSES  */
 
-.title {
-  color: var(--clr-dark);
-  padding-top: 1.0625rem;
-  font-size: 1.3125rem;
-  line-height: 1.48;
-  
-  @media screen and (min-width: 768px) {
-    padding-top: 0;
-  }
-}
-
 .divider {
   opacity: 0.25;
 }
