@@ -11,16 +11,16 @@ function Navbar({ navItems }) {
   };
 
   return (
-    <nav>
-      <button className="nav__button" onClick={toggleMenuVisibility}>
+    <nav className="top-nav">
+      <button className="top-nav__button" onClick={toggleMenuVisibility}>
         Menu
-        {showMenu ? <Close /> : <Hamburger className="hamburger" />}
+        {showMenu ? <Close /> : <Hamburger />}
       </button>
-      <ul className={`nav__list ${showMenu ? 'active' : 'hidden'}`}>
-        {/* <hr className="divider" /> */}
+      <ul className={`top-nav__list ${showMenu ? 'active' : 'hidden'}`}>
+        <hr className="divider" />
         {navItems.map((navItem, index) => (
-          <li className="nav__item" key={index}>
-            <a href={navItem.link} className="nav__link underline">
+          <li className="top-nav__item" key={index}>
+            <a href={navItem.link} className="top-nav__link underline">
               {navItem.label}
             </a>
           </li>

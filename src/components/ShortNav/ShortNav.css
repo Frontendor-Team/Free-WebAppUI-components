@@ -34,8 +34,4 @@
     justify-content: space-between;
     padding-bottom: 0.6875rem;
   }
-
-  .flex-order {
-    order: -1;
-  }
 }
