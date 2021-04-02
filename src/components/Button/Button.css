@@ -1,4 +1,5 @@
 .btn {
+  font: inherit;
   font-size: 0.8125rem;
   padding: 0.6875rem 3.875rem;
   border-radius: 0.3125rem;
