@@ -5,12 +5,13 @@ import Button from '../Button/Button';
 import Navbar from '../Navbar/Navbar';
 import Alert from '../Alert/Alert';
 import Container from '../Container/Container';
+import Wrapper from '../Wrapper/Wrapper';
 import { ReactComponent as Add } from '../../assets/Add.svg';
 import { ReactComponent as Dots } from '../../assets/Dots.svg';
 
 function ShortNav({ navItems }) {
   return (
-    <div className="wrapper">
+    <Wrapper>
       <SearchBar />
       <hr className="divider" />
       <Container>
@@ -30,9 +31,8 @@ function ShortNav({ navItems }) {
           <Navbar navItems={navItems} />
         </div>
       </Container>
-
       <Alert />
-    </div>
+    </Wrapper>
   );
 }
 

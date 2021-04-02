@@ -4,11 +4,12 @@ import Button from '../Button/Button';
 import Navbar from '../Navbar/Navbar';
 import Alert from '../Alert/Alert';
 import Container from '../Container/Container';
+import Wrapper from '../Wrapper/Wrapper';
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
 function LongNav({ navItems }) {
   return (
-    <div className="wrapper">
+    <Wrapper>
       <Container>
         <div className="long-nav">
           <div className="long-nav__header">
@@ -21,7 +22,7 @@ function LongNav({ navItems }) {
         </div>
       </Container>
       <Alert />
-    </div>
+    </Wrapper>
   );
 }
 

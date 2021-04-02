@@ -3,12 +3,13 @@ import './WelcomeHeader.css';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
 import Alert from '../Alert/Alert';
+import Wrapper from '../Wrapper/Wrapper';
 
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
 function WelcomeHeader({ name }) {
   return (
-    <div className="wrapper">
+    <Wrapper>
       <Container>
         <header className="welcome">
           <Button color="light" usage="welcome__btn">
@@ -27,7 +28,7 @@ function WelcomeHeader({ name }) {
         </header>
       </Container>
       <Alert alertText="Your user count is at the upper limit. You should upgrade soon." />
-    </div>
+    </Wrapper>
   );
 }
 
