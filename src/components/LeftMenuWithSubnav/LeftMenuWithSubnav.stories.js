@@ -6,7 +6,6 @@ import { ReactComponent as Storage } from '../../assets/Storage.svg';
 import { ReactComponent as Messages } from '../../assets/Messages.svg';
 import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
-import { FullHeight } from '../FullHeight/FullHeight';
 
 export default {
   title: 'Left style/LeftMenuWithSubnav',

@@ -20,10 +20,10 @@ function SidebarMenu({ sidebarData }) {
           Account
         </div>
         <button className="left-style__btn" onClick={toggleSideBarVisibility}>
-          {showSidebar ? <Close /> : <Hamburger className="hamburger" />}
+          {showSidebar ? <Close /> : <Hamburger />}
         </button>
       </div>
-      <ul className={`left-style__menu ${showSidebar ? 'open' : 'closed'} `}>
+      <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
         {sidebarData.map((item, index) => {
           return <SubMenu item={item} key={index} />;
         })}

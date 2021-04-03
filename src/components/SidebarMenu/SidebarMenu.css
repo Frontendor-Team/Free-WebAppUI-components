@@ -47,16 +47,19 @@
 
 .left-style__btn svg {
   fill: currentColor;
+  width: 1.1875rem;
+  height: 1.1875rem;
 }
 
 .left-style__menu {
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.2s ease;
   height: auto;
   list-style: none;
+  max-height: 0;
 }
 
-/* Submenu.js */
+/* Subnav styles */
 .menu-link {
   display: flex;
   border-top: solid 1px var(--clr-light-grayish-blue);
@@ -101,13 +104,19 @@
 .left-style__subnav {
   border-top: solid 1px var(--clr-light-grayish-blue);
   overflow: hidden;
-  transition: max-height 1s ease;
+  max-height: 0;
+  transition: 0.2s ease;
   height: auto;
+}
+
+.open {
+  max-height: 62.5rem;
 }
 
 .subnav-item {
   padding: 0 1rem;
   color: var(--clr-steel);
+  list-style: none;
 }
 
 .subnav-item:first-child {
@@ -120,6 +129,7 @@
 
 .subnav-link {
   color: var(--clr-steel);
+  text-decoration: none;
   display: block;
   padding-top: 0.6875rem;
   padding-bottom: 0.6875rem;
@@ -131,14 +141,6 @@
   outline: none;
   color: var(--clr-battleship-grey);
   background-color: var(--clr-light-grayish-blue);
-}
-
-.open {
-  max-height: 62.5rem;
-}
-
-.closed {
-  max-height: 0;
 }
 
 @media screen and (min-width: 997px) {
@@ -158,7 +160,7 @@
   }
 
   .left-style__menu {
-    max-height: unset;
+    max-height: 62.5rem;
     padding-top: 0.4375rem;
     position: relative;
   }
@@ -189,23 +191,19 @@
 
   .left-style__subnav {
     border: none;
-    width: 12.5rem;
+    min-width: 0;
     position: absolute;
     background-color: var(--clr-pale-gray);
-    transition: 0.4s ease;
-    right: -200px;
-
+    right: -15.25rem;
+    z-index: 998;
     height: 100%;
+    max-height: unset;
     top: 0;
     border-left: solid 1px var(--clr-light-grayish-blue);
   }
 
   .open {
     right: 0;
-    max-height: unset;
-  }
-
-  .closed {
-    max-height: unset;
+    min-width: 12.5rem;
   }
 }

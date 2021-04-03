@@ -15,24 +15,21 @@ const SubMenu = ({ item }) => {
       {/* passing # instead of link for testing */}
       <a href="#" onClick={subNav && showSubnav} className="menu-link">
         {icon} <span className="menu-label">{text}</span>
-        {item.subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
-        {item.subNav && (
-          <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>
-        )}
+        {subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
+        {subNav && <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>}
       </a>
       {subNav && (
-        <ul className={`left-style__subnav ${subnav ? 'open' : 'closed'}`}>
-          {subnav &&
-            subNav.map((subNavItem, index) => {
-              return (
-                <li className="subnav-item" key={index}>
-                  {/* passing # instead of subNavItem.path for testing */}
-                  <a href="#" className="subnav-link">
-                    {subNavItem.label}
-                  </a>
-                </li>
-              );
-            })}
+        <ul className={`${subnav ? 'left-style__subnav open' : 'left-style__subnav'}`}>
+          {subNav.map((subNavItem, index) => {
+            return (
+              <li className="subnav-item" key={index}>
+                {/* passing # instead of subNavItem.path for testing */}
+                <a href="#" className="subnav-link">
+                  {subNavItem.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       )}
     </li>
