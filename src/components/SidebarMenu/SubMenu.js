@@ -14,7 +14,7 @@ const SubMenu = ({ item }) => {
     <li className="menu-item" key={index}>
       {/* passing # instead of link for testing */}
       <a href="#" onClick={subNav && showSubnav} className="menu-link">
-        {icon} <span className="menu-label">{text}</span>
+        {icon && icon} <span className="menu-label">{text}</span>
         {subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
         {subNav && <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>}
       </a>
