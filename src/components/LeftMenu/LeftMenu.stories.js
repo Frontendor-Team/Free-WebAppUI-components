@@ -10,6 +10,13 @@ import { ReactComponent as Settings } from '../../assets/Settings.svg';
 export default {
   title: 'Left style/LeftMenu',
   component: LeftMenu,
+  decorators: [
+    (Story) => (
+      <div style={{ height: '100vh' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <LeftMenu {...args} />;

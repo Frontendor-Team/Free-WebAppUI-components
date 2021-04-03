@@ -22,7 +22,6 @@ html {
   }
 
 body {
-  min-height: 100%;
   font-family: 'Poppins', sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;

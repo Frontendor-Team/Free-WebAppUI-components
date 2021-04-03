@@ -9,7 +9,6 @@ function LeftMenuWithSubnav({ sidebarData }) {
       <div className="sidebar-header">
         <SidebarHeader />
       </div>
-
       <SidebarMenu sidebarData={sidebarData} />
     </div>
   );
