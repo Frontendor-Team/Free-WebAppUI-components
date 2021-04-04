@@ -25,9 +25,15 @@ function SidebarMenu({ sidebarData, showSidebar, toggleSideBarVisibility, subnav
             <li className="menu-item" key={index}>
               <a href={link} onClick={() => toggleSubnav(index)} key={index} className="menu-link">
                 {icon && icon} <span className="menu-label">{text}</span>
-                {subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
                 {subNav && (
-                  <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>
+                  <ArrowUp
+                    className={`arrow-up ${subnav && subnav === index ? 'rotate' : ''}`}
+                  ></ArrowUp>
+                )}
+                {subNav && (
+                  <ArrowRight
+                    className={`arrow-right ${subnav && subnav === index ? 'rotate' : ''}`}
+                  ></ArrowRight>
                 )}
               </a>
               {subNav && subnav === index ? (
