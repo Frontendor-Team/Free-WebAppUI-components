@@ -3,13 +3,7 @@ import './Navbar.css';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
 
-function Navbar({ navItems }) {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenuVisibility = () => {
-    setShowMenu(!showMenu);
-  };
-
+function Navbar({ navItems, toggleMenuVisibility, showMenu }) {
   return (
     <nav className="top-nav">
       <button className="top-nav__button" onClick={toggleMenuVisibility}>

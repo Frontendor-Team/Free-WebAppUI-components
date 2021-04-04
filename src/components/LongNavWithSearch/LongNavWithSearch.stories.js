@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LongNavWithSearch from './LongNavWithSearch';
 
 export default {
   title: 'Top Style/LongNavWithSearch',
   component: LongNavWithSearch,
 };
-const Template = (args) => <LongNavWithSearch {...args} />;
+
+const Template = (args) => {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenuVisibility = () => {
+    setShowMenu(!showMenu);
+  };
+  return (
+    <LongNavWithSearch {...args} showMenu={showMenu} toggleMenuVisibility={toggleMenuVisibility} />
+  );
+};
 
 export const NavLinksWithSearch = Template.bind({});
 NavLinksWithSearch.args = {

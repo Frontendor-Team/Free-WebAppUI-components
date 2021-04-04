@@ -9,7 +9,7 @@ import Wrapper from '../Wrapper/Wrapper';
 import Title from '../Title/Title';
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
-function LongNavWithSearch({ navItems }) {
+function LongNavWithSearch({ navItems, showMenu, toggleMenuVisibility }) {
   return (
     <Wrapper>
       <Container>
@@ -20,7 +20,11 @@ function LongNavWithSearch({ navItems }) {
             </Button>
             <Title flexOrder="flex-order">Subscription</Title>
           </div>
-          <Navbar navItems={navItems} />
+          <Navbar
+            navItems={navItems}
+            showMenu={showMenu}
+            toggleMenuVisibility={toggleMenuVisibility}
+          />
         </div>
       </Container>
       <hr className="divider" />

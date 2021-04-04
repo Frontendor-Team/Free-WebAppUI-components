@@ -10,7 +10,7 @@ import Title from '../Title/Title';
 import { ReactComponent as Add } from '../../assets/Add.svg';
 import { ReactComponent as Dots } from '../../assets/Dots.svg';
 
-function ShortNav({ navItems }) {
+function ShortNav({ navItems, showMenu, toggleMenuVisibility }) {
   return (
     <Wrapper>
       <SearchBar />
@@ -29,7 +29,11 @@ function ShortNav({ navItems }) {
             </div>
             <Title flexOrder="flex-order">Main Library</Title>
           </div>
-          <Navbar navItems={navItems} />
+          <Navbar
+            navItems={navItems}
+            showMenu={showMenu}
+            toggleMenuVisibility={toggleMenuVisibility}
+          />
         </div>
       </Container>
       <Alert />
