@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LeftMenuShort from './LeftMenuShort';
 
 export default {
@@ -13,7 +13,20 @@ export default {
   ],
 };
 
-const Template = (args) => <LeftMenuShort {...args} />;
+const Template = (args) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const toggleSideBarVisibility = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  return (
+    <LeftMenuShort
+      {...args}
+      showSidebar={showSidebar}
+      toggleSideBarVisibility={toggleSideBarVisibility}
+    />
+  );
+};
 
 export const ShortMenu = Template.bind({});
 ShortMenu.args = {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LeftMenu from './LeftMenu';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
@@ -19,7 +19,20 @@ export default {
   ],
 };
 
-const Template = (args) => <LeftMenu {...args} />;
+const Template = (args) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const toggleSideBarVisibility = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  return (
+    <LeftMenu
+      {...args}
+      showSidebar={showSidebar}
+      toggleSideBarVisibility={toggleSideBarVisibility}
+    />
+  );
+};
 
 export const MenuRegular = Template.bind({});
 MenuRegular.args = {

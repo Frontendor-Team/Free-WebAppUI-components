@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LeftMenuWithSubnav from './LeftMenuWithSubnav';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
@@ -19,7 +19,31 @@ export default {
   ],
 };
 
-const Template = (args) => <LeftMenuWithSubnav {...args} />;
+const Template = (args) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const toggleSideBarVisibility = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  const [subnav, setSubnav] = useState(false);
+
+  const toggleSubnav = (index) => {
+    if (subnav === index) {
+      return setSubnav(null);
+    }
+    setSubnav(index);
+  };
+
+  return (
+    <LeftMenuWithSubnav
+      {...args}
+      showSidebar={showSidebar}
+      toggleSideBarVisibility={toggleSideBarVisibility}
+      subnav={subnav}
+      toggleSubnav={toggleSubnav}
+    />
+  );
+};
 
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
@@ -27,44 +51,44 @@ MenuLarge.args = {
     {
       text: 'Overview',
       icon: <Overview />,
-      link: '/overview',
+      // link: '/#',
       subNav: [
-        { label: 'Analytics', path: '/analytics' },
-        { label: 'Company Benefits', path: '/company-benefits' },
-        { label: 'Time Tracking', path: '/time-tracking' },
+        { label: 'Analytics', path: '/#' },
+        { label: 'Company Benefits', path: '/#' },
+        { label: 'Time Tracking', path: '/#' },
       ],
     },
     {
       text: 'Notes',
       icon: <Notes />,
-      link: '/notes',
+      link: '/#',
     },
     {
       text: 'Storage',
       icon: <Storage />,
-      link: '/storage',
+      link: '/#',
     },
     {
       text: 'Messages',
       icon: <Messages />,
-      link: '/messages',
+      link: '/#',
     },
     {
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/onboarding',
+      link: '/#',
     },
     {
       text: 'Settings',
       icon: <Settings />,
-      link: '/settings',
+      // link: '/#',
       subNav: [
-        { label: 'General', path: '/general' },
-        { label: 'Security', path: '/security' },
-        { label: 'Privacy', path: '/privacy' },
-        { label: 'Surveys', path: '/surveys' },
-        { label: 'Languages', path: '/languages' },
-        { label: 'Subscription', path: '/subscription' },
+        { label: 'General', path: '/#' },
+        { label: 'Security', path: '/#' },
+        { label: 'Privacy', path: '/#' },
+        { label: 'Surveys', path: '/#' },
+        { label: 'Languages', path: '/#' },
+        { label: 'Subscription', path: '/#' },
       ],
     },
   ],

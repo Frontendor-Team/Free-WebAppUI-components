@@ -7,11 +7,6 @@ import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
 import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
 
 function SidebarMenu({ sidebarData, showSidebar, toggleSideBarVisibility, subnav, toggleSubnav }) {
-  // const [subnav, setSubnav] = useState(false);
-  // const showSubnav = () => setSubnav(!subnav);
-
-  // const { icon, text, subNav, link } = sidebarItem;
-
   return (
     <nav className="left-style">
       <div className="left-style__user">

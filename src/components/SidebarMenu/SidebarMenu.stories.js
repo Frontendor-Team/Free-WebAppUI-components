@@ -25,7 +25,6 @@ const Template = (args) => {
       return setSubnav(null);
     }
     setSubnav(index);
-    console.log(index, subnav);
   };
 
   return (
@@ -41,7 +40,7 @@ const Template = (args) => {
 
 export const Menu = Template.bind({});
 Menu.args = {
-  // showMenu: true,
+  showMenu: true,
   sidebarData: [
     {
       text: 'Overview',
