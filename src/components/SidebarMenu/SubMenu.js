@@ -8,12 +8,11 @@ const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => setSubnav(!subnav);
 
-  const { index, icon, text, subNav } = item;
+  const { index, icon, text, subNav, link } = item;
 
   return (
     <li className="menu-item" key={index}>
-      {/* passing # instead of link for testing */}
-      <a href="#" onClick={subNav && showSubnav} className="menu-link">
+      <a href={link} onClick={subNav && showSubnav} className="menu-link">
         {icon && icon} <span className="menu-label">{text}</span>
         {subNav && <ArrowUp className={`arrow-up ${subnav ? 'rotate' : ''}`}></ArrowUp>}
         {subNav && <ArrowRight className={`arrow-right ${subnav ? 'rotate' : ''}`}></ArrowRight>}
@@ -23,8 +22,7 @@ const SubMenu = ({ item }) => {
           {subNav.map((subNavItem, index) => {
             return (
               <li className="subnav-item" key={index}>
-                {/* passing # instead of subNavItem.path for testing */}
-                <a href="#" className="subnav-link">
+                <a href={subNavItem.path} className="subnav-link">
                   {subNavItem.label}
                 </a>
               </li>

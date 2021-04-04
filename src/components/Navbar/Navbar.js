@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
 import { ReactComponent as Close } from '../../assets/Close.svg';
