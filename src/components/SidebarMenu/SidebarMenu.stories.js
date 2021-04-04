@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SidebarMenu from './SidebarMenu';
-
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -13,10 +12,36 @@ export default {
   component: SidebarMenu,
 };
 
-const Template = (args) => <SidebarMenu {...args} />;
+const Template = (args) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const toggleSideBarVisibility = () => {
+    setShowSidebar(!showSidebar);
+  };
+
+  const [subnav, setSubnav] = useState(false);
+
+  const toggleSubnav = (index) => {
+    if (subnav === index) {
+      return setSubnav(null);
+    }
+    setSubnav(index);
+    console.log(index, subnav);
+  };
+
+  return (
+    <SidebarMenu
+      {...args}
+      showSidebar={showSidebar}
+      toggleSideBarVisibility={toggleSideBarVisibility}
+      subnav={subnav}
+      toggleSubnav={toggleSubnav}
+    />
+  );
+};
 
 export const Menu = Template.bind({});
 Menu.args = {
+  // showMenu: true,
   sidebarData: [
     {
       text: 'Overview',
@@ -53,6 +78,7 @@ Menu.args = {
 
 export const MenuWithSubNav = Template.bind({});
 MenuWithSubNav.args = {
+  showMenu: true,
   sidebarData: [
     {
       text: 'Overview',
