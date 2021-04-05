@@ -32,7 +32,14 @@ function SidebarMenu({
           return (
             <li className="menu-item" key={index}>
               <a href={link} onClick={() => toggleSubnav(text)} key={index} className="menu-link">
-                {icon && icon} <span className="menu-label">{text}</span>
+                {icon && icon}
+                <span
+                  className={`menu-label ${
+                    subNav && selectedSubNav && selectedSubNav === text ? 'fade' : ''
+                  }`}
+                >
+                  {text}
+                </span>
                 {subNav && (
                   <ArrowUp
                     className={`arrow-up ${
@@ -43,7 +50,7 @@ function SidebarMenu({
                 {subNav && (
                   <ArrowRight
                     className={`arrow-right ${
-                      selectedSubNav && selectedSubNav === text ? 'rotate' : ''
+                      selectedSubNav && selectedSubNav === text ? 'fade' : ''
                     }`}
                   ></ArrowRight>
                 )}

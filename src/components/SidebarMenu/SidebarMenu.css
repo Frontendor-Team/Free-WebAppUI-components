@@ -105,7 +105,7 @@
   border-top: solid 1px var(--clr-light-grayish-blue);
   overflow: hidden;
   max-height: 0;
-  transition: 0.2s ease;
+  transition: 0.4s ease;
   height: auto;
 }
 
@@ -173,7 +173,6 @@
 
   .menu-link:hover,
   .menu-link:focus {
-    color: var(--clr-steel);
     background-color: var(--clr-light-grayish-blue);
   }
 
@@ -194,7 +193,7 @@
     min-width: 0;
     position: absolute;
     background-color: var(--clr-pale-gray);
-    right: -15.25rem;
+    right: -11rem;
     z-index: 998;
     height: 100%;
     max-height: unset;
@@ -218,5 +217,10 @@
   .open {
     right: 0;
     min-width: 12.5rem;
+  }
+
+  .fade {
+    opacity: 0;
+    transition: 0.3s ease;
   }
 }
