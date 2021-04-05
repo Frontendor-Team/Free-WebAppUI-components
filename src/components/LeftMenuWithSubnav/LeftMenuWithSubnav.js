@@ -7,7 +7,7 @@ function LeftMenuWithSubnav({
   sidebarData,
   showSidebar,
   toggleSideBarVisibility,
-  subnav,
+  selectedSubNav,
   toggleSubnav,
 }) {
   return (
@@ -19,7 +19,7 @@ function LeftMenuWithSubnav({
         sidebarData={sidebarData}
         showSidebar={showSidebar}
         toggleSideBarVisibility={toggleSideBarVisibility}
-        subnav={subnav}
+        selectedSubNav={selectedSubNav}
         toggleSubnav={toggleSubnav}
       />
     </div>

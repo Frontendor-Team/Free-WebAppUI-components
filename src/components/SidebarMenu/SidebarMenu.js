@@ -6,7 +6,13 @@ import { ReactComponent as Close } from '../../assets/Close.svg';
 import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
 import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
 
-function SidebarMenu({ sidebarData, showSidebar, toggleSideBarVisibility, subnav, toggleSubnav }) {
+function SidebarMenu({
+  sidebarData,
+  showSidebar,
+  toggleSideBarVisibility,
+  selectedSubNav,
+  toggleSubnav,
+}) {
   return (
     <nav className="left-style">
       <div className="left-style__user">
@@ -20,24 +26,30 @@ function SidebarMenu({ sidebarData, showSidebar, toggleSideBarVisibility, subnav
         </button>
       </div>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
-        {sidebarData.map(({ icon, text, subNav, link }, index) => {
+        {sidebarData.map(({ id, icon, text, subNav, link }, index) => {
           return (
             <li className="menu-item" key={index}>
-              <a href={link} onClick={() => toggleSubnav(index)} key={index} className="menu-link">
+              <a href={link} onClick={() => toggleSubnav(id)} key={index} className="menu-link">
                 {icon && icon} <span className="menu-label">{text}</span>
                 {subNav && (
                   <ArrowUp
-                    className={`arrow-up ${subnav && subnav === index ? 'rotate' : ''}`}
+                    className={`arrow-up ${
+                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                    }`}
                   ></ArrowUp>
                 )}
                 {subNav && (
                   <ArrowRight
-                    className={`arrow-right ${subnav && subnav === index ? 'rotate' : ''}`}
+                    className={`arrow-right ${
+                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                    }`}
                   ></ArrowRight>
                 )}
               </a>
-              {subNav && subnav === index ? (
-                <ul className={`${subnav ? 'left-style__subnav open' : 'left-style__subnav'}`}>
+              {subNav && selectedSubNav === id ? (
+                <ul
+                  className={`${selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav'}`}
+                >
                   {subNav.map(({ path, label }, index) => {
                     return (
                       <li className="subnav-item" key={index}>
