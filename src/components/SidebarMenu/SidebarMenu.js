@@ -26,24 +26,24 @@ function SidebarMenu({
         </button>
       </div>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
-        {sidebarData.map(({ id, icon, text, subNav, link }, index) => {
+        {sidebarData.map(({ icon, text, subNav, link }, index) => {
           const showDropdown =
-            id === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
+            text === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
           return (
             <li className="menu-item" key={index}>
-              <a href={link} onClick={() => toggleSubnav(id)} key={index} className="menu-link">
+              <a href={link} onClick={() => toggleSubnav(text)} key={index} className="menu-link">
                 {icon && icon} <span className="menu-label">{text}</span>
                 {subNav && (
                   <ArrowUp
                     className={`arrow-up ${
-                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                      selectedSubNav && selectedSubNav === text ? 'rotate' : ''
                     }`}
                   ></ArrowUp>
                 )}
                 {subNav && (
                   <ArrowRight
                     className={`arrow-right ${
-                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                      selectedSubNav && selectedSubNav === text ? 'rotate' : ''
                     }`}
                   ></ArrowRight>
                 )}

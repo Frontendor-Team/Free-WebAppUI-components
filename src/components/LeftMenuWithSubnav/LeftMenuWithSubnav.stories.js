@@ -49,7 +49,6 @@ export const MenuLarge = Template.bind({});
 MenuLarge.args = {
   sidebarData: [
     {
-      id: 1,
       text: 'Overview',
       icon: <Overview />,
       // link: '/#',
@@ -60,31 +59,26 @@ MenuLarge.args = {
       ],
     },
     {
-      id: 2,
       text: 'Notes',
       icon: <Notes />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 3,
       text: 'Storage',
       icon: <Storage />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 4,
       text: 'Messages',
       icon: <Messages />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 5,
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 6,
       text: 'Settings',
       icon: <Settings />,
       // link: '/#',

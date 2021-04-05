@@ -18,10 +18,13 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
-  const [selectedSubNav, setSelectedSubNav] = useState(1);
+  const [selectedSubNav, setSelectedSubNav] = useState(false);
 
-  const toggleSubnav = (id) => {
-    setSelectedSubNav(id);
+  const toggleSubnav = (text) => {
+    if (selectedSubNav == text) {
+      return setSelectedSubNav(null);
+    }
+    setSelectedSubNav(text);
   };
 
   return (
@@ -39,37 +42,31 @@ export const Menu = Template.bind({});
 Menu.args = {
   sidebarData: [
     {
-      id: 1,
       text: 'Overview',
       icon: <Overview />,
       link: '/#',
     },
     {
-      id: 2,
       text: 'Notes',
       icon: <Notes />,
       link: '/#',
     },
     {
-      id: 3,
       text: 'Storage',
       icon: <Storage />,
       link: '/#',
     },
     {
-      id: 4,
       text: 'Messages',
       icon: <Messages />,
       link: '/#',
     },
     {
-      id: 5,
       text: 'Onboarding',
       icon: <Onboarding />,
       link: '/#',
     },
     {
-      id: 6,
       text: 'Settings',
       icon: <Settings />,
       link: '/#',
@@ -81,7 +78,6 @@ export const MenuWithSubNav = Template.bind({});
 MenuWithSubNav.args = {
   sidebarData: [
     {
-      id: 1,
       text: 'Overview',
       icon: <Overview />,
       // link: '/#',
@@ -92,31 +88,26 @@ MenuWithSubNav.args = {
       ],
     },
     {
-      id: 2,
       text: 'Notes',
       icon: <Notes />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 3,
       text: 'Storage',
       icon: <Storage />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 4,
       text: 'Messages',
       icon: <Messages />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 5,
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/#',
+      // link: '/#',
     },
     {
-      id: 6,
       text: 'Settings',
       icon: <Settings />,
       // link: '/#',
