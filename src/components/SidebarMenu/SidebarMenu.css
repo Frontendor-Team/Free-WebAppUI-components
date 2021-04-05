@@ -165,7 +165,7 @@
     position: relative;
   }
 
-  /* Subnav.js */
+  /* Subnav */
   .menu-link {
     border: unset;
     padding: 0.6875rem 0.75rem;
@@ -200,6 +200,20 @@
     max-height: unset;
     top: 0;
     border-left: solid 1px var(--clr-light-grayish-blue);
+
+    padding-top: 0.4375rem;
+  }
+
+  .subnav-item:first-child {
+    padding-top: 0.25rem;
+  }
+
+  .subnav-item {
+    padding: 0.25rem 0.875rem;
+  }
+
+  .subnav-link {
+    padding: 0.6875rem 0.75rem;
   }
 
   .open {
