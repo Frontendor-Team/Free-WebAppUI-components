@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SidebarMenu } from './SidebarMenu';
+import SidebarMenu from './SidebarMenu';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -18,20 +18,22 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
-  // const [selectedSubNav, setSelectedSubNav] = useState(false);
+  const [selectedSubNav, setSelectedSubNav] = useState(false);
 
-  // const toggleSubnav = (id) => {
-  //   if (selectedSubNav == id) {
-  //     return setSelectedSubNav(null);
-  //   }
-  //   setSelectedSubNav(id);
-  // };
+  const toggleSubnav = (id) => {
+    if (selectedSubNav == id) {
+      return setSelectedSubNav(null);
+    }
+    setSelectedSubNav(id);
+  };
 
   return (
     <SidebarMenu
       {...args}
       showSidebar={showSidebar}
       toggleSideBarVisibility={toggleSideBarVisibility}
+      toggleSubnav={toggleSubnav}
+      selectedSubNav={selectedSubNav}
     />
   );
 };

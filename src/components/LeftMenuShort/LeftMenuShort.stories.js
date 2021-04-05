@@ -19,11 +19,22 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
+  const [selectedSubNav, setSelectedSubNav] = useState(false);
+
+  const toggleSubnav = (id) => {
+    if (selectedSubNav == id) {
+      return setSelectedSubNav(null);
+    }
+    setSelectedSubNav(id);
+  };
+
   return (
     <LeftMenuShort
       {...args}
       showSidebar={showSidebar}
       toggleSideBarVisibility={toggleSideBarVisibility}
+      toggleSubnav={toggleSubnav}
+      selectedSubNav={selectedSubNav}
     />
   );
 };

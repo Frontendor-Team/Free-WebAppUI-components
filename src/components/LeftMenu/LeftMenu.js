@@ -1,6 +1,6 @@
 import React from 'react';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
-import { SidebarMenu } from '../SidebarMenu/SidebarMenu';
+import SidebarMenu from '../SidebarMenu/SidebarMenu';
 
 function LeftMenu({ sidebarData, showSidebar, toggleSideBarVisibility }) {
   return (

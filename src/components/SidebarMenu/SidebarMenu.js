@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SidebarMenu.css';
 import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
@@ -6,7 +6,13 @@ import { ReactComponent as Close } from '../../assets/Close.svg';
 import { ReactComponent as ArrowUp } from '../../assets/ArrowUp.svg';
 import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
 
-export const SidebarMenu = ({ sidebarData, showSidebar, toggleSideBarVisibility }) => {
+function SidebarMenu({
+  sidebarData,
+  showSidebar,
+  toggleSideBarVisibility,
+  selectedSubNav,
+  toggleSubnav,
+}) {
   return (
     <nav className="left-style">
       <div className="left-style__user">
@@ -20,53 +26,47 @@ export const SidebarMenu = ({ sidebarData, showSidebar, toggleSideBarVisibility 
         </button>
       </div>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
-        {sidebarData.map((subNavGroup, index) => {
-          return <SubMenu subNavGroup={subNavGroup} key={index} />;
+        {sidebarData.map(({ id, icon, text, subNav, link }, index) => {
+          return (
+            <li className="menu-item" key={index}>
+              <a href={link} onClick={() => toggleSubnav(id)} key={index} className="menu-link">
+                {icon && icon} <span className="menu-label">{text}</span>
+                {subNav && (
+                  <ArrowUp
+                    className={`arrow-up ${
+                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                    }`}
+                  ></ArrowUp>
+                )}
+                {subNav && (
+                  <ArrowRight
+                    className={`arrow-right ${
+                      selectedSubNav && selectedSubNav === id ? 'rotate' : ''
+                    }`}
+                  ></ArrowRight>
+                )}
+              </a>
+              {subNav && selectedSubNav === id ? (
+                <ul
+                  className={`${selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav'}`}
+                >
+                  {subNav.map(({ path, label }, index) => {
+                    return (
+                      <li className="subnav-item" key={index}>
+                        <a href={path} className="subnav-link">
+                          {label}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : null}
+            </li>
+          );
         })}
       </ul>
     </nav>
   );
-};
+}
 
-export const SubMenu = ({ subNavGroup }) => {
-  const [selectedSubNav, setSelectedSubNav] = useState(false);
-
-  const toggleSubnav = (id) => {
-    if (selectedSubNav == id) {
-      return setSelectedSubNav(null);
-    }
-    setSelectedSubNav(id);
-  };
-  const { id, icon, text, subNav, link, index } = subNavGroup;
-
-  return (
-    <li className="menu-item" key={index}>
-      <a href={link} onClick={() => toggleSubnav(id)} key={index} className="menu-link">
-        {icon && icon} <span className="menu-label">{text}</span>
-        {subNav && (
-          <ArrowUp
-            className={`arrow-up ${selectedSubNav && selectedSubNav === id ? 'rotate' : ''}`}
-          ></ArrowUp>
-        )}
-        {subNav && (
-          <ArrowRight
-            className={`arrow-right ${selectedSubNav && selectedSubNav === id ? 'rotate' : ''}`}
-          ></ArrowRight>
-        )}
-      </a>
-      {subNav && selectedSubNav === id ? (
-        <ul className={`${selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav'}`}>
-          {subNav.map(({ path, label }, index) => {
-            return (
-              <li className="subnav-item" key={index}>
-                <a href={path} className="subnav-link">
-                  {label}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      ) : null}
-    </li>
-  );
-};
+export default SidebarMenu;

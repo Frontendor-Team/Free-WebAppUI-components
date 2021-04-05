@@ -1,8 +1,14 @@
 import React from 'react';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
-import { SidebarMenu } from '../SidebarMenu/SidebarMenu';
+import SidebarMenu from '../SidebarMenu/SidebarMenu';
 
-function LeftMenuShort({ sidebarData, showSidebar, toggleSideBarVisibility }) {
+function LeftMenuShort({
+  sidebarData,
+  showSidebar,
+  toggleSideBarVisibility,
+  toggleSubnav,
+  selectedSubNav,
+}) {
   return (
     <div>
       <div className="sidebar-wrapper">
@@ -13,6 +19,8 @@ function LeftMenuShort({ sidebarData, showSidebar, toggleSideBarVisibility }) {
           sidebarData={sidebarData}
           showSidebar={showSidebar}
           toggleSideBarVisibility={toggleSideBarVisibility}
+          toggleSubnav={toggleSubnav}
+          selectedSubNav={selectedSubNav}
         />
       </div>
     </div>
