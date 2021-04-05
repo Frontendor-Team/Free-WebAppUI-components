@@ -40,32 +40,32 @@ MenuRegular.args = {
     {
       text: 'Overview',
       icon: <Overview />,
-      link: '/overview',
+      link: '/#',
     },
     {
       text: 'Notes',
       icon: <Notes />,
-      link: '/notes',
+      link: '/#',
     },
     {
       text: 'Storage',
       icon: <Storage />,
-      link: '/storage',
+      link: '/#',
     },
     {
       text: 'Messages',
       icon: <Messages />,
-      link: '/messages',
+      link: '/#',
     },
     {
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/onboarding',
+      link: '/#',
     },
     {
       text: 'Settings',
       icon: <Settings />,
-      link: '/settings',
+      link: '/#',
     },
   ],
 };

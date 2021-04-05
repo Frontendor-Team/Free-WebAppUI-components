@@ -33,15 +33,15 @@ ShortMenu.args = {
   sidebarData: [
     {
       text: 'Edit Profile',
-      link: '/edit-profile',
+      link: '/#',
     },
     {
       text: 'Change Password',
-      link: '/change-password',
+      link: '/#',
     },
     {
       text: 'Authentication',
-      link: '/authentication',
+      link: '/#',
     },
   ],
 };
