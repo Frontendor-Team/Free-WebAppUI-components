@@ -173,7 +173,7 @@
 
   .menu-link:hover,
   .menu-link:focus {
-    color: var(--clr-battleship-grey);
+    color: var(--clr-steel);
     background-color: var(--clr-light-grayish-blue);
   }
 
@@ -200,7 +200,6 @@
     max-height: unset;
     top: 0;
     border-left: solid 1px var(--clr-light-grayish-blue);
-
     padding-top: 0.4375rem;
   }
 

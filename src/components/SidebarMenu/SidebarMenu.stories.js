@@ -18,12 +18,9 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
-  const [selectedSubNav, setSelectedSubNav] = useState(false);
+  const [selectedSubNav, setSelectedSubNav] = useState(1);
 
   const toggleSubnav = (id) => {
-    if (selectedSubNav == id) {
-      return setSelectedSubNav(null);
-    }
     setSelectedSubNav(id);
   };
 

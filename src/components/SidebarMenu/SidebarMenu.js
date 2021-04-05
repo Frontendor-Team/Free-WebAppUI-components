@@ -27,6 +27,8 @@ function SidebarMenu({
       </div>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
         {sidebarData.map(({ id, icon, text, subNav, link }, index) => {
+          const showDropdown =
+            id === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
           return (
             <li className="menu-item" key={index}>
               <a href={link} onClick={() => toggleSubnav(id)} key={index} className="menu-link">
@@ -46,10 +48,8 @@ function SidebarMenu({
                   ></ArrowRight>
                 )}
               </a>
-              {subNav && selectedSubNav === id ? (
-                <ul
-                  className={`${selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav'}`}
-                >
+              {subNav && (
+                <ul className={showDropdown}>
                   {subNav.map(({ path, label }, index) => {
                     return (
                       <li className="subnav-item" key={index}>
@@ -60,7 +60,7 @@ function SidebarMenu({
                     );
                   })}
                 </ul>
-              ) : null}
+              )}
             </li>
           );
         })}
