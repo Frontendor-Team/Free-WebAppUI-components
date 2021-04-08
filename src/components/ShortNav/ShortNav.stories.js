@@ -17,8 +17,8 @@ const Template = (args) => {
 export const FewLinks = Template.bind({});
 FewLinks.args = {
   navItems: [
-    { label: 'files', link: '/files' },
-    { label: 'activities', link: '/activities' },
-    { label: 'overviews', link: '/overviews' },
+    { label: 'files', link: '#files' },
+    { label: 'activities', link: '#activities' },
+    { label: 'overviews', link: '#overviews' },
   ],
 };
