@@ -3,6 +3,7 @@
   font-size: 0.75rem;
   line-height: 1.5;
   padding: 0.5625rem;
+  background-color: var(--clr-white);
   border: solid 1px var(--clr-light-grayish-blue);
   border-radius: 0.3125rem;
 }
