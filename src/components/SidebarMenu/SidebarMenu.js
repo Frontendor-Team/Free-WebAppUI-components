@@ -29,17 +29,22 @@ function SidebarMenu({
         {sidebarData.map(({ icon, text, subNav, link }, index) => {
           const showMenuDropdown =
             text === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
+
+          const selectedSubnavItem = subNav && selectedSubNav && text === selectedSubNav;
           return (
             <li className="menu-item" key={index}>
-              <a href={link} onClick={() => toggleSubnav(text)} key={index} className="menu-link">
-                {icon && icon}
+              <a
+                href="#"
+                onClick={() => toggleSubnav(text)}
+                className={`menu-link ${selectedSubnavItem ? 'focused-link' : ''}`}
+              >
                 <span
-                  className={`menu-label ${
-                    subNav && selectedSubNav && selectedSubNav === text ? 'fade' : ''
-                  }`}
+                  className={`menu-icon
+                    ${selectedSubnavItem ? 'focused-icon' : ''}`}
                 >
-                  {text}
+                  {icon && icon}
                 </span>
+                <span className={`menu-label ${selectedSubnavItem ? 'fade' : ''}`}>{text}</span>
                 {subNav && (
                   <ArrowUp
                     className={`arrow-up ${
@@ -60,7 +65,7 @@ function SidebarMenu({
                   {subNav.map(({ path, label }, index) => {
                     return (
                       <li className="subnav-item" key={index}>
-                        <a href={path} className="subnav-link">
+                        <a href="#" className="subnav-link">
                           {label}
                         </a>
                       </li>

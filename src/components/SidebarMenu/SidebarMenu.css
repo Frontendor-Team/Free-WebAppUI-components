@@ -168,13 +168,38 @@
 
   .menu-link {
     border: unset;
-    padding: 0.6875rem 0.75rem;
+    padding: 0;
+    align-items: center;
+  }
+
+  .menu-link svg {
+    vertical-align: middle;
+  }
+
+  .menu-icon {
+    padding: 0.6875rem;
+    border-radius: 5px;
+  }
+
+  .menu-label {
+    /* padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem; */
+    margin-left: 0.5rem;
   }
 
   .menu-link:hover,
   .menu-link:focus {
     background-color: var(--clr-light-grayish-blue);
     border-radius: 0.3125rem;
+  }
+
+  .focused-link:focus {
+    background: transparent;
+  }
+
+  .focused-icon {
+    background-color: var(--clr-light-grayish-blue);
+    vertical-align: bottom;
   }
 
   .menu-item {
@@ -216,8 +241,11 @@
   }
 
   .open {
+    /* right: -0.625rem; */
     right: 0;
-    min-width: 12.5rem;
+    /* min-width: 12.5rem; */
+    /* min-width: 13.5625rem; */
+    min-width: 12.1rem;
   }
 
   .fade {
