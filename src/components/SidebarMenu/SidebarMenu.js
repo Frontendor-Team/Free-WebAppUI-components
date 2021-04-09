@@ -27,7 +27,7 @@ function SidebarMenu({
       </div>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
         {sidebarData.map(({ icon, text, subNav, link }, index) => {
-          const showDropdown =
+          const showMenuDropdown =
             text === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
           return (
             <li className="menu-item" key={index}>
@@ -56,7 +56,7 @@ function SidebarMenu({
                 )}
               </a>
               {subNav && (
-                <ul className={showDropdown}>
+                <ul className={showMenuDropdown}>
                   {subNav.map(({ path, label }, index) => {
                     return (
                       <li className="subnav-item" key={index}>

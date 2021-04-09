@@ -11,7 +11,21 @@ const Template = (args) => {
   const toggleMenuVisibility = () => {
     setShowMenu(!showMenu);
   };
-  return <ShortNav {...args} showMenu={showMenu} toggleMenuVisibility={toggleMenuVisibility} />;
+
+  const [showDropdown, setshowDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setshowDropdown(!showDropdown);
+  };
+
+  return (
+    <ShortNav
+      {...args}
+      showMenu={showMenu}
+      toggleMenuVisibility={toggleMenuVisibility}
+      showDropdown={showDropdown}
+      toggleDropdown={toggleDropdown}
+    />
+  );
 };
 
 export const FewLinks = Template.bind({});
@@ -20,5 +34,20 @@ FewLinks.args = {
     { label: 'files', link: '#files' },
     { label: 'activities', link: '#activities' },
     { label: 'overviews', link: '#overviews' },
+  ],
+  dropdownListData: [
+    {
+      text: 'Archive Files',
+      link: '#archive-files',
+    },
+    {
+      text: 'Trash Files',
+      link: '#trash-files',
+    },
+    {
+      text: 'Exported Files',
+
+      link: '#exported-files',
+    },
   ],
 };
