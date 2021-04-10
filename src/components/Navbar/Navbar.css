@@ -1,3 +1,7 @@
+.top-nav {
+  background-color: var(--clr-white);
+}
+
 .top-nav__button {
   font: inherit;
   background-color: transparent;
