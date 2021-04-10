@@ -1,9 +1,9 @@
 import React from 'react';
 import './Dropdown.css';
 
-function Dropdown({ dropdownListData, showDropdown, navVariant }) {
+function Dropdown({ dropdownListData, showDropdown }) {
   return (
-    <ul className={`dropdown ${showDropdown ? 'shown' : ''} ${navVariant ? navVariant : ''}`}>
+    <ul className={`dropdown ${showDropdown ? 'shown' : ''}`}>
       {dropdownListData.map(({ text, link }, index) => {
         return (
           <li key={index} className="dropdown-item">

@@ -40,12 +40,28 @@
   border: none;
   outline: none;
   background-color: transparent;
+  color: var(--clr-steel);
+  padding-left: 1rem;
+}
+
+.left-header__btn:hover {
+  color: var(--clr-battleship-grey);
 }
 
 .unfold path {
-  stroke: var(--clr-steel);
+  stroke: currentColor;
 }
 
-.unfold:hover path {
-  stroke: var(--clr-battleship-grey);
+.left-header .dropdown {
+  top: 5.5rem;
+  right: 2rem;
+}
+
+@media screen and (min-width: 997px) {
+  .left-header .dropdown {
+    top: 6.3rem;
+    right: unset;
+    left: 2rem;
+    max-width: 14rem;
+  }
 }
