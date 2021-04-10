@@ -37,11 +37,61 @@
   right: 4.3rem;
 }
 
+.account-btn {
+  color: inherit;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.account-btn:hover {
+  color: var(--clr-battleship-grey);
+}
+
+.account-menu {
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  height: auto;
+  list-style: none;
+  /* max-height: 0; */
+  border-top: solid 1px #e5e7eb;
+  padding: 1.5rem;
+}
+
+.account-menu__item {
+  padding: 0.3125rem 0;
+}
+
+.account-menu__link {
+  display: block;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
+  text-decoration: none;
+  color: var(--clr-steel);
+  border-radius: 0.3125rem;
+}
+
+.account-menu__link:hover,
+.account-menu__link:focus {
+  background-color: #e7e9eb;
+  color: var(--clr-battleship-grey);
+}
+
+.account-menu--active {
+  max-height: 62.5rem;
+}
+
 .left-style__btn {
   border: none;
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  color: var(--clr-steel);
+  padding-left: 1rem;
+}
+
+.left-style__btn:hover {
   color: var(--clr-battleship-grey);
 }
 
