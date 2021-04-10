@@ -16,7 +16,6 @@ const Template = (args) => {
 
 export const LongNavLinks = Template.bind({});
 LongNavLinks.args = {
-  showMenu: true,
   navItems: [
     { label: 'analytics', link: '#analytics' },
     { label: 'plans', link: '#plans' },

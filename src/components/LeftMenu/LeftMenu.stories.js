@@ -25,17 +25,25 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
+  const [showDropdown, setshowDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setshowDropdown(!showDropdown);
+  };
+
   return (
     <LeftMenu
       {...args}
       showSidebar={showSidebar}
       toggleSideBarVisibility={toggleSideBarVisibility}
+      showDropdown={showDropdown}
+      toggleDropdown={toggleDropdown}
     />
   );
 };
 
 export const MenuRegular = Template.bind({});
 MenuRegular.args = {
+  userName: 'Ali Boukeroui',
   sidebarData: [
     {
       text: 'Overview',
@@ -66,6 +74,25 @@ MenuRegular.args = {
       text: 'Settings',
       icon: <Settings />,
       link: '/#',
+    },
+  ],
+  dropdownListData: [
+    {
+      text: 'Workspace',
+      link: '#workspace',
+    },
+    {
+      text: 'Workspace_01',
+      link: '#workspace_01',
+    },
+    {
+      text: 'Workspace_02',
+      link: '#workspace_02',
+    },
+    {
+      text: 'Workspace_03',
+
+      link: '#workspace_03',
     },
   ],
 };

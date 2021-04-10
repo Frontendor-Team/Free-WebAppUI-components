@@ -26,12 +26,16 @@ const Template = (args) => {
   };
 
   const [selectedSubNav, setSelectedSubNav] = useState(false);
-
   const toggleSubnav = (id) => {
     if (selectedSubNav == id) {
       return setSelectedSubNav(null);
     }
     setSelectedSubNav(id);
+  };
+
+  const [showDropdown, setshowDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setshowDropdown(!showDropdown);
   };
 
   return (
@@ -41,12 +45,15 @@ const Template = (args) => {
       toggleSideBarVisibility={toggleSideBarVisibility}
       selectedSubNav={selectedSubNav}
       toggleSubnav={toggleSubnav}
+      showDropdown={showDropdown}
+      toggleDropdown={toggleDropdown}
     />
   );
 };
 
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
+  name: 'Ali Boukeroui',
   sidebarData: [
     {
       text: 'Overview',
@@ -90,6 +97,25 @@ MenuLarge.args = {
         { label: 'Languages', path: '/#' },
         { label: 'Subscription', path: '/#' },
       ],
+    },
+  ],
+  dropdownListData: [
+    {
+      text: 'Workspace',
+      link: '#workspace',
+    },
+    {
+      text: 'Workspace_01',
+      link: '#workspace_01',
+    },
+    {
+      text: 'Workspace_02',
+      link: '#workspace_02',
+    },
+    {
+      text: 'Workspace_03',
+
+      link: '#workspace_03',
     },
   ],
 };

@@ -37,6 +37,9 @@
   margin-left: auto;
   align-self: center;
   cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 .unfold path {

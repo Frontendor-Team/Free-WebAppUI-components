@@ -182,8 +182,7 @@
   }
 
   .menu-label {
-    /* padding-top: 0.6875rem;
-    padding-bottom: 0.6875rem; */
+    padding-top: 0.1875rem;
     margin-left: 0.5rem;
   }
 
@@ -241,10 +240,7 @@
   }
 
   .open {
-    /* right: -0.625rem; */
     right: 0;
-    /* min-width: 12.5rem; */
-    /* min-width: 13.5625rem; */
     min-width: 12.1rem;
   }
 

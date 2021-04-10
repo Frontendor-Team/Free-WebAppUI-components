@@ -2,11 +2,24 @@ import React from 'react';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
 
-function LeftMenu({ sidebarData, showSidebar, toggleSideBarVisibility }) {
+function LeftMenu({
+  sidebarData,
+  userName,
+  dropdownListData,
+  showDropdown,
+  toggleDropdown,
+  showSidebar,
+  toggleSideBarVisibility,
+}) {
   return (
     <div className="sidebar-wrapper">
       <div className="sidebar-header">
-        <SidebarHeader />
+        <SidebarHeader
+          userName={userName}
+          dropdownListData={dropdownListData}
+          showDropdown={showDropdown}
+          toggleDropdown={toggleDropdown}
+        />
       </div>
       <SidebarMenu
         sidebarData={sidebarData}
