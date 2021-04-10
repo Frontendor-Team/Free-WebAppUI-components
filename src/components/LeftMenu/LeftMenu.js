@@ -5,6 +5,10 @@ import SidebarMenu from '../SidebarMenu/SidebarMenu';
 function LeftMenu({
   sidebarData,
   userName,
+  avatar,
+  showAccountMenu,
+  accountListData,
+  toggleAccountMenu,
   dropdownListData,
   showDropdown,
   toggleDropdown,
@@ -22,9 +26,13 @@ function LeftMenu({
         />
       </div>
       <SidebarMenu
+        avatar={avatar}
         sidebarData={sidebarData}
         showSidebar={showSidebar}
         toggleSideBarVisibility={toggleSideBarVisibility}
+        showAccountMenu={showAccountMenu}
+        accountListData={accountListData}
+        toggleAccountMenu={toggleAccountMenu}
       />
     </div>
   );

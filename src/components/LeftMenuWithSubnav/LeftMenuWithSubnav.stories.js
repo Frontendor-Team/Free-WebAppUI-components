@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LeftMenuWithSubnav from './LeftMenuWithSubnav';
+import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -38,6 +39,11 @@ const Template = (args) => {
     setshowDropdown(!showDropdown);
   };
 
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const toggleAccountMenu = () => {
+    setShowAccountMenu(!showAccountMenu);
+  };
+
   return (
     <LeftMenuWithSubnav
       {...args}
@@ -47,6 +53,8 @@ const Template = (args) => {
       toggleSubnav={toggleSubnav}
       showDropdown={showDropdown}
       toggleDropdown={toggleDropdown}
+      showAccountMenu={showAccountMenu}
+      toggleAccountMenu={toggleAccountMenu}
     />
   );
 };
@@ -54,6 +62,21 @@ const Template = (args) => {
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
   userName: 'Ali Boukeroui',
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',

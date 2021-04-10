@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LeftMenu from './LeftMenu';
+import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -25,6 +26,11 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const toggleAccountMenu = () => {
+    setShowAccountMenu(!showAccountMenu);
+  };
+
   const [showDropdown, setshowDropdown] = useState(false);
   const toggleDropdown = () => {
     setshowDropdown(!showDropdown);
@@ -37,6 +43,8 @@ const Template = (args) => {
       toggleSideBarVisibility={toggleSideBarVisibility}
       showDropdown={showDropdown}
       toggleDropdown={toggleDropdown}
+      showAccountMenu={showAccountMenu}
+      toggleAccountMenu={toggleAccountMenu}
     />
   );
 };
@@ -44,6 +52,21 @@ const Template = (args) => {
 export const MenuRegular = Template.bind({});
 MenuRegular.args = {
   userName: 'Ali Boukeroui',
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',

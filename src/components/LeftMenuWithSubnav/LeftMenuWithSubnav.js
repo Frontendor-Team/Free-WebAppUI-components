@@ -6,6 +6,10 @@ import './LeftMenuWithSubnav.css';
 function LeftMenuWithSubnav({
   sidebarData,
   userName,
+  avatar,
+  showAccountMenu,
+  accountListData,
+  toggleAccountMenu,
   showSidebar,
   toggleSideBarVisibility,
   selectedSubNav,
@@ -30,6 +34,10 @@ function LeftMenuWithSubnav({
         toggleSideBarVisibility={toggleSideBarVisibility}
         selectedSubNav={selectedSubNav}
         toggleSubnav={toggleSubnav}
+        avatar={avatar}
+        showAccountMenu={showAccountMenu}
+        accountListData={accountListData}
+        toggleAccountMenu={toggleAccountMenu}
       />
     </div>
   );
