@@ -20,18 +20,17 @@ function SidebarMenu({
   return (
     <nav className="left-style">
       <div className="left-style__user">
-        <div className="user-info">
+        <button className="account-btn" onClick={toggleAccountMenu}>
           <img src={avatar} className="avatar" alt="user-avatar" />
           <span className="status"></span>
-          <button className="account-btn" onClick={toggleAccountMenu}>
-            Account
-          </button>
-        </div>
+          Account
+          <ArrowUp className={`account-menu-arrow ${showAccountMenu ? 'turn' : null}`} />
+        </button>
         <button className="left-style__btn" onClick={toggleSideBarVisibility}>
           {showSidebar ? <Close /> : <Hamburger />}
         </button>
       </div>
-      <ul className={`account-menu ${showAccountMenu ? 'active' : null}`}>
+      <ul className={`account-menu ${showAccountMenu ? 'opened' : null}`}>
         {accountListData.map(({ labelFor, pathTo }, index) => {
           return (
             <li className="account-menu__item" key={index}>

@@ -10,14 +10,6 @@
   padding: 0.6875rem 1.5rem;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  line-height: 1.54;
-  color: var(--clr-steel);
-  position: relative;
-}
-
 .avatar {
   height: 2.0625rem;
   width: 2.0625rem;
@@ -34,16 +26,21 @@
   background-color: #48ab3a;
   border: solid 1px white;
   bottom: 0;
-  right: 4.3rem;
+  left: 1.5rem;
 }
 
 .account-btn {
-  color: inherit;
   font: inherit;
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.54;
+  color: var(--clr-steel);
+  position: relative;
 }
 
 .account-btn:hover {
@@ -60,7 +57,8 @@
   padding: 0 1.5rem;
 }
 
-.showmenu .active {
+.showmenu .active,
+.account-menu--active {
   max-height: 62.5rem;
 }
 
@@ -90,7 +88,7 @@
   color: var(--clr-battleship-grey);
 }
 
-.account-menu--active {
+.opened {
   max-height: 62.5rem;
 }
 
@@ -107,7 +105,9 @@
   color: var(--clr-battleship-grey);
 }
 
-.left-style__btn svg {
+.left-style__btn svg,
+.menu-link svg,
+.account-menu-arrow {
   fill: currentColor;
   width: 1.1875rem;
   height: 1.1875rem;
@@ -135,18 +135,13 @@
   color: var(--clr-battleship-grey);
 }
 
-.menu-link svg {
-  fill: currentColor;
-  width: 1.1875rem;
-  height: 1.1875rem;
-}
-
 .menu-label {
   margin-left: 0.75rem;
 }
 
 .arrow-up,
-.arrow-right {
+.arrow-right,
+.account-menu-arrow {
   transition: transform 0.2s ease;
   margin-left: auto;
 }
@@ -155,7 +150,8 @@
   transform: rotate(180deg);
 }
 
-.arrow-right {
+.arrow-right,
+.account-menu-arrow {
   display: none;
 }
 
@@ -179,6 +175,8 @@
   padding: 0 1rem;
   color: var(--clr-steel);
   list-style: none;
+
+  padding: 0.25rem 0.875rem;
 }
 
 .subnav-item:first-child {
@@ -193,9 +191,7 @@
   color: var(--clr-steel);
   text-decoration: none;
   display: block;
-  padding-top: 0.6875rem;
-  padding-bottom: 0.6875rem;
-  padding-left: 1rem;
+  padding: 0.6875rem 0.75rem 0.6875rem 1.5rem;
 }
 
 .subnav-link:hover,
@@ -206,11 +202,13 @@
   border-radius: 0.3125rem;
 }
 
+/********* DESKTOP STYLES ************/
 @media screen and (min-width: 997px) {
   .left-style {
     display: grid;
     grid-template-rows: 1fr auto;
     background-color: var(--clr-grayish-blue);
+    position: relative;
   }
 
   .left-style__btn {
@@ -226,6 +224,50 @@
     max-height: 62.5rem;
     padding-top: 0.4375rem;
     position: relative;
+  }
+
+  .arrow-right,
+  .account-menu-arrow {
+    display: block;
+  }
+
+  .turn {
+    transform: rotate(180deg);
+  }
+
+  .account-btn {
+    padding: unset;
+    width: 100%;
+  }
+
+  .account-menu {
+    position: absolute;
+    list-style: none;
+    margin-left: 0.875rem;
+    max-height: unset;
+    padding: 0.4375rem 1.1875rem;
+    border: solid 1px #e5e7eb;
+    border-radius: 0.3125rem;
+    background-color: var(--clr-white);
+    z-index: 10;
+    bottom: 3.875rem;
+    width: 100%;
+    max-width: 14.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.625rem);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  }
+
+  .opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 100;
+  }
+
+  .account-menu__item {
+    list-style: none;
   }
 
   .menu-link {
@@ -272,7 +314,7 @@
   }
 
   .arrow-right {
-    display: block;
+    margin-right: 0.625rem;
   }
 
   .left-style__subnav {
