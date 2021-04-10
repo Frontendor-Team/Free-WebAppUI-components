@@ -53,7 +53,7 @@ const Template = (args) => {
 
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
-  name: 'Ali Boukeroui',
+  userName: 'Ali Boukeroui',
   sidebarData: [
     {
       text: 'Overview',

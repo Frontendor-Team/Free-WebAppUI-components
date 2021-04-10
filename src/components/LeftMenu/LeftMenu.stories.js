@@ -48,32 +48,32 @@ MenuRegular.args = {
     {
       text: 'Overview',
       icon: <Overview />,
-      link: '/#',
+      link: '#overview',
     },
     {
       text: 'Notes',
       icon: <Notes />,
-      link: '/#',
+      link: '#notes',
     },
     {
       text: 'Storage',
       icon: <Storage />,
-      link: '/#',
+      link: '#storage',
     },
     {
       text: 'Messages',
       icon: <Messages />,
-      link: '/#',
+      link: '#messages',
     },
     {
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/#',
+      link: '#onboarding',
     },
     {
       text: 'Settings',
       icon: <Settings />,
-      link: '/#',
+      link: '#settings',
     },
   ],
   dropdownListData: [
