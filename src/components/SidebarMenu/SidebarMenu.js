@@ -8,6 +8,9 @@ import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
 
 function SidebarMenu({
   avatar,
+  showAccountMenu,
+  accountListData,
+  toggleAccountMenu,
   sidebarData,
   showSidebar,
   toggleSideBarVisibility,
@@ -17,31 +20,27 @@ function SidebarMenu({
   return (
     <nav className="left-style">
       <div className="left-style__user">
-        <div className="avatar">
-          <img src={avatar} className="avatar-img" alt="user-avatar" />
+        <div className="user-info">
+          <img src={avatar} className="avatar" alt="user-avatar" />
           <span className="status"></span>
-          <button className="account-btn">Account</button>
+          <button className="account-btn" onClick={toggleAccountMenu}>
+            Account
+          </button>
         </div>
         <button className="left-style__btn" onClick={toggleSideBarVisibility}>
           {showSidebar ? <Close /> : <Hamburger />}
         </button>
       </div>
-      <ul className="account-menu">
-        <li className="account-menu__item">
-          <a className="account-menu__link" href="#">
-            Edit Profile
-          </a>
-        </li>
-        <li className="account-menu__item">
-          <a className="account-menu__link" href="#">
-            Change Password
-          </a>
-        </li>
-        <li className="account-menu__item">
-          <a className="account-menu__link" href="#">
-            Authentication
-          </a>
-        </li>
+      <ul className={`account-menu ${showAccountMenu ? 'active' : null}`}>
+        {accountListData.map(({ labelFor, pathTo }, index) => {
+          return (
+            <li className="account-menu__item" key={index}>
+              <a href={pathTo} className="account-menu__link">
+                {labelFor}
+              </a>
+            </li>
+          );
+        })}
       </ul>
       <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
         {sidebarData.map(({ icon, text, subNav, link }, index) => {

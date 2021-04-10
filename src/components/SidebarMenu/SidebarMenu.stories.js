@@ -19,8 +19,12 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
-  const [selectedSubNav, setSelectedSubNav] = useState(false);
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const toggleAccountMenu = () => {
+    setShowAccountMenu(!showAccountMenu);
+  };
 
+  const [selectedSubNav, setSelectedSubNav] = useState(false);
   const toggleSubnav = (text) => {
     if (selectedSubNav == text) {
       return setSelectedSubNav(null);
@@ -32,10 +36,13 @@ const Template = (args) => {
     <SidebarMenu
       {...args}
       avatar={avatar}
+      toggleAccountMenu={toggleAccountMenu}
       showSidebar={showSidebar}
       toggleSideBarVisibility={toggleSideBarVisibility}
       toggleSubnav={toggleSubnav}
       selectedSubNav={selectedSubNav}
+      showAccountMenu={showAccountMenu}
+      toggleAccountMenu={toggleAccountMenu}
     />
   );
 };
@@ -43,6 +50,20 @@ const Template = (args) => {
 export const Menu = Template.bind({});
 Menu.args = {
   avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',
@@ -79,6 +100,21 @@ Menu.args = {
 
 export const MenuWithSubNav = Template.bind({});
 MenuWithSubNav.args = {
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',

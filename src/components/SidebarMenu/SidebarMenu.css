@@ -10,7 +10,7 @@
   padding: 0.6875rem 1.5rem;
 }
 
-.avatar {
+.user-info {
   display: flex;
   align-items: center;
   line-height: 1.54;
@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.avatar-img {
+.avatar {
   height: 2.0625rem;
   width: 2.0625rem;
   border-radius: 50%;
@@ -55,13 +55,25 @@
   transition: max-height 0.2s ease;
   height: auto;
   list-style: none;
-  /* max-height: 0; */
-  border-top: solid 1px #e5e7eb;
-  padding: 1.5rem;
+  max-height: 0;
+  border-top: solid 1px var(--clr-light-grayish-blue);
+  padding: 0 1.5rem;
+}
+
+.showmenu .active {
+  max-height: 62.5rem;
 }
 
 .account-menu__item {
-  padding: 0.3125rem 0;
+  padding: 0.1875rem 0;
+}
+
+.account-menu__item:first-child {
+  padding-top: 1.1875rem;
+}
+
+.account-menu__item:last-child {
+  padding-bottom: 1.1875rem;
 }
 
 .account-menu__link {
@@ -74,7 +86,7 @@
 
 .account-menu__link:hover,
 .account-menu__link:focus {
-  background-color: #e7e9eb;
+  background-color: var(--clr-light-grayish-blue);
   color: var(--clr-battleship-grey);
 }
 
