@@ -5,15 +5,28 @@ import './LeftMenuWithSubnav.css';
 
 function LeftMenuWithSubnav({
   sidebarData,
+  userName,
+  avatar,
+  showAccountMenu,
+  accountListData,
+  toggleAccountMenu,
   showSidebar,
   toggleSideBarVisibility,
   selectedSubNav,
   toggleSubnav,
+  dropdownListData,
+  showDropdown,
+  toggleDropdown,
 }) {
   return (
     <div className="sidebar-wrapper">
       <div className="sidebar-header">
-        <SidebarHeader />
+        <SidebarHeader
+          userName={userName}
+          dropdownListData={dropdownListData}
+          showDropdown={showDropdown}
+          toggleDropdown={toggleDropdown}
+        />
       </div>
       <SidebarMenu
         sidebarData={sidebarData}
@@ -21,6 +34,10 @@ function LeftMenuWithSubnav({
         toggleSideBarVisibility={toggleSideBarVisibility}
         selectedSubNav={selectedSubNav}
         toggleSubnav={toggleSubnav}
+        avatar={avatar}
+        showAccountMenu={showAccountMenu}
+        accountListData={accountListData}
+        toggleAccountMenu={toggleAccountMenu}
       />
     </div>
   );

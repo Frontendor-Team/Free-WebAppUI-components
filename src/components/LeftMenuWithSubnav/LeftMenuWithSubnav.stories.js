@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LeftMenuWithSubnav from './LeftMenuWithSubnav';
+import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -26,12 +27,21 @@ const Template = (args) => {
   };
 
   const [selectedSubNav, setSelectedSubNav] = useState(false);
-
   const toggleSubnav = (id) => {
     if (selectedSubNav == id) {
       return setSelectedSubNav(null);
     }
     setSelectedSubNav(id);
+  };
+
+  const [showDropdown, setshowDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setshowDropdown(!showDropdown);
+  };
+
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const toggleAccountMenu = () => {
+    setShowAccountMenu(!showAccountMenu);
   };
 
   return (
@@ -41,12 +51,32 @@ const Template = (args) => {
       toggleSideBarVisibility={toggleSideBarVisibility}
       selectedSubNav={selectedSubNav}
       toggleSubnav={toggleSubnav}
+      showDropdown={showDropdown}
+      toggleDropdown={toggleDropdown}
+      showAccountMenu={showAccountMenu}
+      toggleAccountMenu={toggleAccountMenu}
     />
   );
 };
 
 export const MenuLarge = Template.bind({});
 MenuLarge.args = {
+  userName: 'Ali Boukeroui',
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',
@@ -90,6 +120,25 @@ MenuLarge.args = {
         { label: 'Languages', path: '/#' },
         { label: 'Subscription', path: '/#' },
       ],
+    },
+  ],
+  dropdownListData: [
+    {
+      text: 'Workspace',
+      link: '#workspace',
+    },
+    {
+      text: 'Workspace_01',
+      link: '#workspace_01',
+    },
+    {
+      text: 'Workspace_02',
+      link: '#workspace_02',
+    },
+    {
+      text: 'Workspace_03',
+
+      link: '#workspace_03',
     },
   ],
 };

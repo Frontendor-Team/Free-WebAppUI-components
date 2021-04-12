@@ -26,13 +26,12 @@ ShortForm.args = {
 
 export const LongForm = Template.bind({});
 LongForm.args = {
-  showMenu: true,
   navItems: [
-    { label: 'analytics', link: '/#' },
-    { label: 'plans', link: '/#' },
-    { label: 'user overview', link: '/#' },
-    { label: 'invoices', link: '/#' },
-    { label: 'payment details', link: '/#' },
-    { label: 'billing address', link: '/#' },
+    { label: 'analytics', link: '#analytics' },
+    { label: 'plans', link: '#plans' },
+    { label: 'user overview', link: '#user-overview' },
+    { label: 'invoices', link: '#invoices' },
+    { label: 'payment details', link: '#payment-details' },
+    { label: 'billing address', link: '#billing-address' },
   ],
 };

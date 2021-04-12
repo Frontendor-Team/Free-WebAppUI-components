@@ -1,21 +1,23 @@
 import React from 'react';
 import './SidebarHeader.css';
+import Dropdown from '../Dropdown/Dropdown';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import { ReactComponent as Unfold } from '../../assets/Unfold.svg';
 
-function SidebarHeader() {
+function SidebarHeader({ userName, dropdownListData, showDropdown, toggleDropdown }) {
   return (
     <div className="left-header">
       <div className="left-header__logo">
         <Logo />
       </div>
       <div className="left-header__user-info">
-        <h1 className="username">Ali Boukeroui</h1>
+        <h1 className="username">{userName}</h1>
         <p className="page">Workspace</p>
       </div>
-      <div className="left-header__btn">
+      <button className="left-header__btn" onClick={toggleDropdown}>
         <Unfold className="unfold" />
-      </div>
+      </button>
+      <Dropdown dropdownListData={dropdownListData} showDropdown={showDropdown} />
     </div>
   );
 }

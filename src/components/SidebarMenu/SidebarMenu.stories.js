@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SidebarMenu from './SidebarMenu';
+import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Overview } from '../../assets/Overview.svg';
 import { ReactComponent as Notes } from '../../assets/Notes.svg';
 import { ReactComponent as Storage } from '../../assets/Storage.svg';
@@ -18,8 +19,12 @@ const Template = (args) => {
     setShowSidebar(!showSidebar);
   };
 
-  const [selectedSubNav, setSelectedSubNav] = useState(false);
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const toggleAccountMenu = () => {
+    setShowAccountMenu(!showAccountMenu);
+  };
 
+  const [selectedSubNav, setSelectedSubNav] = useState(false);
   const toggleSubnav = (text) => {
     if (selectedSubNav == text) {
       return setSelectedSubNav(null);
@@ -30,94 +35,128 @@ const Template = (args) => {
   return (
     <SidebarMenu
       {...args}
+      avatar={avatar}
+      toggleAccountMenu={toggleAccountMenu}
       showSidebar={showSidebar}
       toggleSideBarVisibility={toggleSideBarVisibility}
       toggleSubnav={toggleSubnav}
       selectedSubNav={selectedSubNav}
+      showAccountMenu={showAccountMenu}
+      toggleAccountMenu={toggleAccountMenu}
     />
   );
 };
 
 export const Menu = Template.bind({});
 Menu.args = {
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',
       icon: <Overview />,
-      link: '/#',
+      link: '#overview',
     },
     {
       text: 'Notes',
       icon: <Notes />,
-      link: '/#',
+      link: '#notes',
     },
     {
       text: 'Storage',
       icon: <Storage />,
-      link: '/#',
+      link: '#storage',
     },
     {
       text: 'Messages',
       icon: <Messages />,
-      link: '/#',
+      link: '#messages',
     },
     {
       text: 'Onboarding',
       icon: <Onboarding />,
-      link: '/#',
+      link: '#onboarding',
     },
     {
       text: 'Settings',
       icon: <Settings />,
-      link: '/#',
+      link: '#settings',
     },
   ],
 };
 
 export const MenuWithSubNav = Template.bind({});
 MenuWithSubNav.args = {
+  avatar: avatar,
+  accountListData: [
+    {
+      labelFor: 'Edit Profile',
+      pathTo: '#edit-profile',
+    },
+    {
+      labelFor: 'Change Password',
+      pathTo: '#change-password',
+    },
+    {
+      labelFor: 'Authentication',
+      pathTo: '#authentication',
+    },
+  ],
   sidebarData: [
     {
       text: 'Overview',
       icon: <Overview />,
-      // link: '/#',
+      link: '#overview',
       subNav: [
-        { label: 'Analytics', path: '/#' },
-        { label: 'Company Benefits', path: '/#' },
-        { label: 'Time Tracking', path: '/#' },
+        { label: 'Analytics', path: '#analytics' },
+        { label: 'Company Benefits', path: '#company-benefits' },
+        { label: 'Time Tracking', path: '#time-tracking' },
       ],
     },
     {
       text: 'Notes',
       icon: <Notes />,
-      // link: '/#',
+      link: '#notes',
     },
     {
       text: 'Storage',
       icon: <Storage />,
-      // link: '/#',
+      link: '#storage',
     },
     {
       text: 'Messages',
       icon: <Messages />,
-      // link: '/#',
+      link: '#messages',
     },
     {
       text: 'Onboarding',
       icon: <Onboarding />,
-      // link: '/#',
+      link: '#onboarding',
     },
     {
       text: 'Settings',
       icon: <Settings />,
-      // link: '/#',
+      link: '#settings',
       subNav: [
-        { label: 'General', path: '/#' },
-        { label: 'Security', path: '/#' },
-        { label: 'Privacy', path: '/#' },
-        { label: 'Surveys', path: '/#' },
-        { label: 'Languages', path: '/#' },
-        { label: 'Subscription', path: '/#' },
+        { label: 'General', path: '#general' },
+        { label: 'Security', path: '#security' },
+        { label: 'Privacy', path: '#privacy' },
+        { label: 'Surveys', path: '#surveys' },
+        { label: 'Languages', path: '#languages' },
+        { label: 'Subscription', path: '#subscription' },
       ],
     },
   ],

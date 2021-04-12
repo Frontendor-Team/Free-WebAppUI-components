@@ -1,3 +1,7 @@
+.top-nav {
+  background-color: var(--clr-white);
+}
+
 .top-nav__button {
   font: inherit;
   background-color: transparent;
@@ -92,11 +96,11 @@
     color: var(--clr-steel);
   }
 
-  .underline {
+  .top-nav__link {
     position: relative;
   }
 
-  .underline::after {
+  .top-nav__link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -106,9 +110,12 @@
     bottom: -1rem;
     background-color: var(--clr-bright-blue);
     transition: width 0.2s ease;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
   }
 
-  .underline:hover::after {
+  .top-nav__link:hover::after,
+  .top-nav__link:focus::after {
     opacity: 1;
     width: 100%;
   }

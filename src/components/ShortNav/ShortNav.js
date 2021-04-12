@@ -9,8 +9,16 @@ import Wrapper from '../Wrapper/Wrapper';
 import Title from '../Title/Title';
 import { ReactComponent as Add } from '../../assets/Add.svg';
 import { ReactComponent as Dots } from '../../assets/Dots.svg';
+import Dropdown from '../Dropdown/Dropdown';
 
-function ShortNav({ navItems, showMenu, toggleMenuVisibility }) {
+function ShortNav({
+  navItems,
+  showMenu,
+  toggleMenuVisibility,
+  dropdownListData,
+  showDropdown,
+  toggleDropdown,
+}) {
   return (
     <Wrapper>
       <SearchBar />
@@ -23,9 +31,12 @@ function ShortNav({ navItems, showMenu, toggleMenuVisibility }) {
                 Add Files
                 <Add className="add-icon" />
               </Button>
-              <Button color="light" usage="short-nav__btn--light">
-                <Dots className="dots-icon" />
-              </Button>
+              <div>
+                <Button color="light" usage="short-nav__btn--light" onClick={toggleDropdown}>
+                  <Dots className="dots-icon" />
+                </Button>
+                <Dropdown dropdownListData={dropdownListData} showDropdown={showDropdown} />
+              </div>
             </div>
             <Title flexOrder="flex-order">Main Library</Title>
           </div>

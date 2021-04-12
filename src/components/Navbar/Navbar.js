@@ -14,7 +14,7 @@ function Navbar({ navItems, toggleMenuVisibility, showMenu }) {
         <hr className="divider" />
         {navItems.map((navItem, index) => (
           <li className="top-nav__item" key={index}>
-            <a href={navItem.link} className="top-nav__link underline">
+            <a href={navItem.link} className="top-nav__link">
               {navItem.label}
             </a>
           </li>

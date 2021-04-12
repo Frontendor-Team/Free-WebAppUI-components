@@ -5,7 +5,6 @@ import Button from '../Button/Button';
 import Title from '../Title/Title';
 import Alert from '../Alert/Alert';
 import Wrapper from '../Wrapper/Wrapper';
-
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
 function WelcomeHeader({ name }) {

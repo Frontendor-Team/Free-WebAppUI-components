@@ -19,11 +19,11 @@ const Template = (args) => {
 export const NavLinksWithSearch = Template.bind({});
 NavLinksWithSearch.args = {
   navItems: [
-    { label: 'analytics', link: '/analytics' },
-    { label: 'plans', link: '/plans' },
-    { label: 'user overview', link: '/user-overview' },
-    { label: 'invoices', link: '/invoices' },
-    { label: 'payment details', link: '/payment-details' },
-    { label: 'billing address', link: '/billing-address' },
+    { label: 'analytics', link: '#analytics' },
+    { label: 'plans', link: '#plans' },
+    { label: 'user overview', link: '#user-overview' },
+    { label: 'invoices', link: '#invoices' },
+    { label: 'payment details', link: '#payment-details' },
+    { label: 'billing address', link: '#billing-address' },
   ],
 };
