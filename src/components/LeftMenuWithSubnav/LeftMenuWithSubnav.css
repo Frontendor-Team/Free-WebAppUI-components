@@ -1,4 +1,6 @@
 .sidebar-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
   box-shadow: 0 8px 60px 0 rgb(0 0 0 / 15%);
   background-color: var(--clr-grayish-blue);
 }

@@ -103,20 +103,19 @@
   .top-nav__link::after {
     content: '';
     position: absolute;
-    width: 0;
     opacity: 0;
-    height: 0.125rem;
+    width: 100%;
+    height: 0.2rem;
     left: 0;
-    bottom: -1rem;
+    bottom: -16px;
     background-color: var(--clr-bright-blue);
-    transition: width 0.2s ease;
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
+    transition: 0.2s all;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
   }
 
   .top-nav__link:hover::after,
   .top-nav__link:focus::after {
     opacity: 1;
-    width: 100%;
   }
 }

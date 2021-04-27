@@ -6,6 +6,12 @@
   background-color: var(--clr-white);
   border: solid 1px var(--clr-light-grayish-blue);
   border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.left-header:hover {
+  border-color: var(--clr-bright-blue);
 }
 
 .left-header__logo {
@@ -42,10 +48,12 @@
   background-color: transparent;
   color: var(--clr-steel);
   padding-left: 1rem;
+  padding-right: 0.2rem;
+  transition: 0.2s all;
 }
 
-.left-header__btn:hover {
-  color: var(--clr-battleship-grey);
+.left-header:hover .left-header__btn {
+  color: var(--clr-bright-blue);
 }
 
 .unfold path {

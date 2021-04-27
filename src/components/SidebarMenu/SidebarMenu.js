@@ -9,8 +9,8 @@ import { ReactComponent as ArrowRight } from '../../assets/ArrowRight.svg';
 function SidebarMenu({
   avatar,
   showAccountMenu,
-  accountListData,
   toggleAccountMenu,
+  accountListData,
   sidebarData,
   showSidebar,
   toggleSideBarVisibility,
@@ -34,7 +34,7 @@ function SidebarMenu({
         {accountListData.map(({ labelFor, pathTo }, index) => {
           return (
             <li className="account-menu__item" key={index}>
-              <a href={pathTo} className="account-menu__link">
+              <a href={pathTo} className="account-menu__link" onClick={toggleAccountMenu}>
                 {labelFor}
               </a>
             </li>

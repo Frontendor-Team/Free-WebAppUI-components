@@ -6,7 +6,7 @@ import { ReactComponent as Unfold } from '../../assets/Unfold.svg';
 
 function SidebarHeader({ userName, dropdownListData, showDropdown, toggleDropdown }) {
   return (
-    <div className="left-header">
+    <div className="left-header" role="button" onClick={toggleDropdown}>
       <div className="left-header__logo">
         <Logo />
       </div>
@@ -14,7 +14,7 @@ function SidebarHeader({ userName, dropdownListData, showDropdown, toggleDropdow
         <h1 className="username">{userName}</h1>
         <p className="page">Workspace</p>
       </div>
-      <button className="left-header__btn" onClick={toggleDropdown}>
+      <button className="left-header__btn">
         <Unfold className="unfold" />
       </button>
       <Dropdown dropdownListData={dropdownListData} showDropdown={showDropdown} />

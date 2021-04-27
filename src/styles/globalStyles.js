@@ -26,6 +26,7 @@ body {
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.54;
+  background-color: #f6f9fc !important;
 }`;
 
 export default GlobalStyles;

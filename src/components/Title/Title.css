@@ -3,6 +3,8 @@
   padding-top: 1.0625rem;
   font-size: 1.3125rem;
   line-height: 1.48;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
