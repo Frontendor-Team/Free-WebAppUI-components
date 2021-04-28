@@ -137,7 +137,6 @@ MenuLarge.args = {
     },
     {
       text: 'Workspace_03',
-
       link: '#workspace_03',
     },
   ],

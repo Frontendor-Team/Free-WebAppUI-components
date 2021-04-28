@@ -41,10 +41,16 @@ function SidebarMenu({
           );
         })}
       </ul>
-      <ul className={`${showSidebar ? 'left-style__menu open' : 'left-style__menu'}`}>
+      <ul
+        className={`${
+          showSidebar ? 'left-style__menu left-style__menu--open' : 'left-style__menu'
+        }`}
+      >
         {sidebarData.map(({ icon, text, subNav, link }, index) => {
           const showMenuDropdown =
-            text === selectedSubNav ? 'left-style__subnav open' : 'left-style__subnav';
+            text === selectedSubNav
+              ? 'left-style__subnav left-style__subnav--open'
+              : 'left-style__subnav';
 
           const selectedSubnavItem = subNav && selectedSubNav && text === selectedSubNav;
           return (
