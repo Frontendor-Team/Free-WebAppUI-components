@@ -24,13 +24,13 @@ function SidebarMenu({
           <img src={avatar} className="avatar" alt="user-avatar" />
           <span className="status"></span>
           Account
-          <ArrowUp className={`account-menu-arrow ${showAccountMenu ? 'turn' : null}`} />
+          <ArrowUp className={`account-menu-arrow ${showAccountMenu ? 'turn' : ''}`} />
         </button>
         <button className="left-style__btn" onClick={toggleSideBarVisibility}>
           {showSidebar ? <Close /> : <Hamburger />}
         </button>
       </div>
-      <ul className={`account-menu ${showAccountMenu ? 'opened' : null}`}>
+      <ul className={`account-menu ${showAccountMenu ? 'account-menu--open' : ''}`}>
         {accountListData.map(({ labelFor, pathTo }, index) => {
           return (
             <li className="account-menu__item" key={index}>

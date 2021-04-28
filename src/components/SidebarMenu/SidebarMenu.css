@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  padding: 0.6875rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .avatar {
@@ -49,12 +49,12 @@
 
 .account-menu {
   overflow: hidden;
-  transition: max-height 0.2s ease;
   height: auto;
   list-style: none;
   max-height: 0;
-  border-top: solid 1px var(--clr-light-grayish-blue);
+  border-top: solid 1px transparent;
   padding: 0 1.5rem;
+  transition: 0.2s all;
 }
 
 .showmenu .active,
@@ -82,8 +82,10 @@
   color: #182842;
 }
 
-.opened {
+.account-menu--open {
   max-height: 62.5rem;
+  padding: 1rem 1.5rem;
+  border-color: var(--clr-light-grayish-blue);
 }
 
 .left-style__btn {
@@ -107,6 +109,12 @@
   height: 1.1875rem;
 }
 
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .left-style__menu {
   overflow: hidden;
   transition: max-height 0.2s ease;
@@ -118,8 +126,9 @@
 /* Subnav styles */
 .menu-link {
   display: flex;
+  align-items: center;
   border-top: solid 1px var(--clr-light-grayish-blue);
-  padding: 0.6875rem 1.5rem;
+  padding: 1rem 1.5rem;
   color: var(--clr-steel);
   text-decoration: none;
 }
@@ -254,7 +263,7 @@
     transition: 0.2s all;
   }
 
-  .opened {
+  .account-menu--open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -282,7 +291,7 @@
 
   .menu-label {
     padding-top: 0.1875rem;
-    margin-left: 0.5rem;
+    margin-left: 0.55rem;
   }
 
   .menu-link:hover,
@@ -340,7 +349,7 @@
 
   .open {
     right: 0;
-    min-width: 12.1rem;
+    min-width: calc(100% - 64px);
   }
 
   .fade {

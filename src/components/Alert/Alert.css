@@ -1,7 +1,7 @@
 .alert {
   text-align: center;
   background-color: #fff8e6;
-  padding: 0.6875rem 0;
+  padding: 1rem 0;
   border-top: 0.0625rem solid var(--clr-light-grayish-blue);
 }
 

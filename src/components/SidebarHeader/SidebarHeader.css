@@ -1,4 +1,5 @@
 .left-header {
+  position: relative;
   display: flex;
   font-size: 0.75rem;
   line-height: 1.5;
@@ -61,15 +62,5 @@
 }
 
 .left-header .dropdown {
-  top: 5.5rem;
-  right: 2rem;
-}
-
-@media screen and (min-width: 997px) {
-  .left-header .dropdown {
-    top: 6.3rem;
-    right: unset;
-    left: 2rem;
-    max-width: 14rem;
-  }
+  top: 4.25rem;
 }

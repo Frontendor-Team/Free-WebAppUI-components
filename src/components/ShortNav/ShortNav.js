@@ -35,7 +35,11 @@ function ShortNav({
                 <Button color="light" usage="short-nav__btn--light" onClick={toggleDropdown}>
                   <Dots className="dots-icon" />
                 </Button>
-                <Dropdown dropdownListData={dropdownListData} showDropdown={showDropdown} />
+                <Dropdown
+                  dropdownListData={dropdownListData}
+                  showDropdown={showDropdown}
+                  toggleDropdown={toggleDropdown}
+                />
               </div>
             </div>
             <Title flexOrder="flex-order">Main Library</Title>
