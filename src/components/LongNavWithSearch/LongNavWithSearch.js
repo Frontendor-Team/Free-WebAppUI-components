@@ -27,6 +27,7 @@ function LongNavWithSearch({ navItems, showMenu, toggleMenuVisibility }) {
           />
         </div>
       </Container>
+      <hr class="divider" />
       <SearchBar />
       <Alert />
     </Wrapper>
