@@ -31,7 +31,7 @@ function ShortNav({
                 Add Files
                 <Add className="add-icon" />
               </Button>
-              <div>
+              <div class="short-nav__btn--with-dropdown">
                 <Button color="light" usage="short-nav__btn--light" onClick={toggleDropdown}>
                   <Dots className="dots-icon" />
                 </Button>

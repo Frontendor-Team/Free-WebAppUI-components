@@ -15,7 +15,7 @@ function LongNavWithSearch({ navItems, showMenu, toggleMenuVisibility }) {
       <Container>
         <div className="long-nav">
           <div className="long-nav__header">
-            <Button color="light">
+            <Button color="light" usage="long-nav__btn">
               Upgrade Plan <Arrow className="circled-arrow" />
             </Button>
             <Title flexOrder="flex-order">Subscription</Title>
@@ -27,7 +27,6 @@ function LongNavWithSearch({ navItems, showMenu, toggleMenuVisibility }) {
           />
         </div>
       </Container>
-      <hr className="divider" />
       <SearchBar />
       <Alert />
     </Wrapper>

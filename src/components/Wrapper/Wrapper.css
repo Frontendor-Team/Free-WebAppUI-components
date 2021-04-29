@@ -1,6 +1,4 @@
 .wrapper {
-  border-radius: 5px;
-  overflow: hidden;
   background-color: var(--clr-white);
   box-shadow: 0 4px 40px 0 rgb(0 0 0 / 10%);
   max-width: 90rem; /* 1440px */

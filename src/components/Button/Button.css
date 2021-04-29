@@ -1,14 +1,11 @@
 .btn {
   font: inherit;
   font-size: 0.8125rem;
-  padding: 0.6875rem 3.875rem;
+  padding: 0.6875rem;
   border-radius: 0.3125rem;
   border: solid 0.8px var(--clr-bright-blue);
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0.6875rem 0rem;
-  width: 100%;
-  max-width: 15.125rem;
 }
 
 .btn--light {

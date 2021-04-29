@@ -8,3 +8,22 @@
     justify-content: space-between;
   }
 }
+
+.long-nav__btn {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .long-nav__btn {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .long-nav__btn {
+    margin: 0;
+  }
+}

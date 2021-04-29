@@ -3,7 +3,7 @@ import './Dropdown.css';
 
 function Dropdown({ dropdownListData, showDropdown, toggleDropdown }) {
   return (
-    <ul className={`dropdown ${showDropdown ? 'shown' : ''}`}>
+    <ul className={`dropdown ${showDropdown ? 'dropdown--open' : ''}`}>
       {dropdownListData.map(({ text, link }, index) => {
         return (
           <li key={index} className="dropdown-item">

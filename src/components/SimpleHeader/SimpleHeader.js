@@ -1,5 +1,5 @@
 import React from 'react';
-import './WelcomeHeader.css';
+import './SimpleHeader.css';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
 import Title from '../Title/Title';
@@ -7,22 +7,17 @@ import Alert from '../Alert/Alert';
 import Wrapper from '../Wrapper/Wrapper';
 import { ReactComponent as Arrow } from '../../assets/Arrow.svg';
 
-function WelcomeHeader({ name }) {
+function SimpleHeader({ title }) {
   return (
     <Wrapper>
       <Container>
-        <header className="welcome">
-          <Button color="light" usage="welcome__btn">
+        <header className="simple-header">
+          <Button color="light" usage="simple-header__btn">
             Upgrade Plan
             <Arrow className="circled-arrow" />
           </Button>
-          <Title>
-            Welcome, {name}
-            <span role="img" aria-label="hand waving">
-              👋
-            </span>
-          </Title>
-          <p className="welcome__subheading">
+          <Title>{title}</Title>
+          <p className="simple-header__subheading">
             You have to keep up the pace to accomplish your goals in time.
           </p>
         </header>
@@ -32,4 +27,4 @@ function WelcomeHeader({ name }) {
   );
 }
 
-export default WelcomeHeader;
+export default SimpleHeader;

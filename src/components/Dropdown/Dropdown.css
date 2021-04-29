@@ -34,7 +34,7 @@
   color: #182842;
 }
 
-.shown {
+.dropdown--open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
