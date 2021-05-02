@@ -4,7 +4,7 @@
 }
 
 .sidebar-header {
-  padding: 0.8125rem 1.0625rem;
+  padding: 0.8rem 1.06rem;
 }
 
 @media screen and (min-width: 997px) {
@@ -16,7 +16,7 @@
   }
 
   .sidebar-header {
-    padding: 1.5625rem 1.0625rem;
+    padding: 1.57rem 1.06rem;
     border-bottom: solid 1px var(--clr-light-grayish-blue);
   }
 }

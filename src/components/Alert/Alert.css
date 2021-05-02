@@ -2,17 +2,17 @@
   text-align: center;
   background-color: #fff8e6;
   padding: 1rem 0;
-  border-top: 0.0625rem solid var(--clr-light-grayish-blue);
+  border-top: 0.06rem solid var(--clr-light-grayish-blue);
 }
 
 .alert__icon {
   fill: #ffb000;
-  margin-bottom: 0.4375rem;
+  margin-bottom: 0.44rem;
 }
 
 .alert__text {
   color: var(--clr-dark);
-  max-width: 15.125rem;
+  max-width: 15.13rem;
   margin: 0 auto;
 }
 
@@ -29,6 +29,6 @@
   }
 
   .alert__icon {
-    margin: 0 0.4375rem 0 0;
+    margin: 0 0.44rem 0 0;
   }
 }

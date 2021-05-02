@@ -12,8 +12,8 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  padding-top: 1.0625rem;
-  padding-bottom: 0.875rem;
+  padding-top: 1.06rem;
+  padding-bottom: 0.88rem;
   color: var(--clr-steel);
 }
 
@@ -38,8 +38,8 @@
 .top-nav__button svg {
   /* width: calc(100% - 1.1875rem); */
   fill: currentColor;
-  width: 1.1875rem;
-  height: 1.1875rem;
+  width: 1.19rem;
+  height: 1.19rem;
 }
 
 .top-nav__list {

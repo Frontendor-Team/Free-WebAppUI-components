@@ -1,8 +1,8 @@
 .btn {
   font: inherit;
-  font-size: 0.8125rem;
-  padding: 0.6875rem;
-  border-radius: 0.3125rem;
+  font-size: 0.8rem;
+  padding: 0.67rem;
+  border-radius: 0.3rem;
   border: solid 0.8px var(--clr-bright-blue);
   cursor: pointer;
   transition: all 0.3s ease;

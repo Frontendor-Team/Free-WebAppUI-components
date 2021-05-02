@@ -11,8 +11,8 @@
 }
 
 .avatar {
-  height: 2.0625rem;
-  width: 2.0625rem;
+  height: 2.07rem;
+  width: 2.07rem;
   border-radius: 50%;
   margin-right: 0.75rem;
   object-fit: cover;
@@ -20,8 +20,8 @@
 
 .status {
   position: absolute;
-  width: 0.4375rem;
-  height: 0.4375rem;
+  width: 0.4rem;
+  height: 0.4rem;
   border-radius: 50%;
   background-color: #48ab3a;
   border: solid 1px white;
@@ -105,8 +105,8 @@
 .menu-link svg,
 .account-menu-arrow {
   fill: currentColor;
-  width: 1.1875rem;
-  height: 1.1875rem;
+  width: 1.19rem;
+  height: 1.19rem;
 }
 
 .menu-icon {
@@ -184,22 +184,22 @@
   color: var(--clr-steel);
   list-style: none;
 
-  padding: 0.25rem 0.875rem;
+  padding: 0.25rem 0.88rem;
 }
 
 .subnav-item:first-child {
-  padding-top: 1.4375rem;
+  padding-top: 1.4rem;
 }
 
 .subnav-item:last-child {
-  padding-bottom: 1.4375rem;
+  padding-bottom: 1.4rem;
 }
 
 .subnav-link {
   color: var(--clr-steel);
   text-decoration: none;
   display: block;
-  padding: 0.6875rem 0.75rem 0.6875rem 1.5rem;
+  padding: 0.69rem 0.75rem 0.69rem 1.5rem;
 }
 
 .subnav-link:hover,
@@ -207,7 +207,7 @@
   outline: none;
   color: var(--clr-battleship-grey);
   background-color: var(--clr-light-grayish-blue);
-  border-radius: 0.3125rem;
+  border-radius: 0.3rem;
 }
 
 /********* DESKTOP STYLES ************/
@@ -230,7 +230,7 @@
 
   .left-style__menu {
     max-height: 62.5rem;
-    padding-top: 0.4375rem;
+    padding-top: 0.4rem;
     position: relative;
   }
 
@@ -256,11 +256,11 @@
     list-style: none;
     max-height: unset;
     padding: 1rem;
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
     background-color: var(--clr-white);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     visibility: hidden;
-    transform: translateY(0.625rem);
+    transform: translateY(0.6rem);
     opacity: 0;
     transition: 0.2s all;
     z-index: 2;
@@ -288,19 +288,19 @@
   }
 
   .menu-icon {
-    padding: 0.6875rem;
+    padding: 0.69rem;
     border-radius: 5px;
   }
 
   .menu-label {
-    padding-top: 0.1875rem;
+    padding-top: 0.19rem;
     margin-left: 0.55rem;
   }
 
   .menu-link:hover,
   .menu-link:focus {
     background-color: var(--clr-light-grayish-blue);
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
   }
 
   .focused-link:focus {
@@ -313,7 +313,7 @@
   }
 
   .menu-item {
-    padding: 0.25rem 0.875rem;
+    padding: 0.25rem 0.88rem;
   }
 
   .arrow-up {
@@ -321,7 +321,7 @@
   }
 
   .arrow-right {
-    margin-right: 0.625rem;
+    margin-right: 0.63rem;
   }
 
   .left-style__subnav {
@@ -335,7 +335,7 @@
     max-height: unset;
     top: 0;
     border-left: solid 1px var(--clr-light-grayish-blue);
-    padding-top: 0.4375rem;
+    padding-top: 0.4rem;
   }
 
   .subnav-item:first-child {
@@ -347,7 +347,7 @@
   }
 
   .subnav-link {
-    padding: 0.6875rem 0.75rem;
+    padding: 0.69rem 0.75rem;
   }
 
   .left-style__subnav--open {
