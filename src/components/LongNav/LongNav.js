@@ -11,10 +11,10 @@ function LongNav({ navItems, showMenu, toggleMenuVisibility }) {
   return (
     <Wrapper>
       <Container>
-        <div className="long-nav">
-          <div className="long-nav__header">
-            <Button color="light" usage="long-nav__btn">
-              Upgrade Plan <Arrow className="circled-arrow" />
+        <div className="ui-long-nav">
+          <div className="ui-long-nav__header">
+            <Button color="primary-empty" usage="ui-long-nav__btn">
+              Upgrade Plan <Arrow className="ui-circled-arrow" />
             </Button>
             <Title flexOrder="flex-order">Subscription</Title>
           </div>

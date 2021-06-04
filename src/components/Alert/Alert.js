@@ -1,14 +1,15 @@
 import React from 'react';
 import { ReactComponent as AlertIcon } from '../../assets/Alert.svg';
+import '../../assets/variables.css';
 import './Alert.css';
 import Container from '../Container/Container';
 
 function Alert({ alertText }) {
   return (
-    <div className="alert">
+    <div className="ui-alert">
       <Container>
-        <AlertIcon className="alert__icon" />
-        <p className="alert__text">{alertText}</p>
+        <AlertIcon className="ui-alert__icon" />
+        <p className="ui-alert__text">{alertText}</p>
       </Container>
     </div>
   );

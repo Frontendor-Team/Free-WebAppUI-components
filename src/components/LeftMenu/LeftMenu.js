@@ -16,8 +16,8 @@ function LeftMenu({
   toggleSideBarVisibility,
 }) {
   return (
-    <div className="sidebar-wrapper">
-      <div className="sidebar-header">
+    <div className="ui-sidebar-wrapper">
+      <div className="ui-sidebar-header">
         <SidebarHeader
           userName={userName}
           dropdownListData={dropdownListData}

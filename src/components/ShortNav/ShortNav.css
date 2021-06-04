@@ -1,39 +1,39 @@
-.short-nav {
+.ui-short-nav {
   padding-top: 1.8125rem;
 }
 
-.short-nav__cta {
+.ui-short-nav__cta {
   display: flex;
   justify-content: space-between;
 }
 
-.short-nav__btn--dark {
+.ui-short-nav__btn--dark {
   width: 11.8rem;
   padding: 0.69rem 0;
   margin-right: 0.75rem;
   flex-grow: 1;
 }
 
-.short-nav__btn--light {
+.ui-short-nav__btn--light {
   padding: 0.69rem;
 }
 
-.add-icon {
+.ui-add-icon {
   margin-left: 0.69rem;
   vertical-align: sub;
 }
 
-.dots-icon {
+.ui-dots-icon {
   fill: currentColor;
   vertical-align: sub;
   position: relative;
 }
 
-.short-nav__btn--with-dropdown {
+.ui-short-nav__btn--with-dropdown {
   position: relative;
 }
 
-.short-nav__btn--with-dropdown .dropdown {
+.ui-short-nav__btn--with-dropdown .ui-dropdown {
   top: 55px;
   bottom: auto;
   right: 0;
@@ -43,7 +43,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .short-nav__header {
+  .ui-short-nav__header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.69rem;

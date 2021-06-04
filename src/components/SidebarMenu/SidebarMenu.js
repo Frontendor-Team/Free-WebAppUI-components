@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/variables.css';
 import './SidebarMenu.css';
 // import avatar from '../../assets/picture@3x.jpg';
 import { ReactComponent as Hamburger } from '../../assets/Menu.svg';
@@ -18,23 +19,23 @@ function SidebarMenu({
   toggleSubnav,
 }) {
   return (
-    <nav className="left-style">
-      <div className="left-style__user">
-        <button className="account-btn" onClick={toggleAccountMenu}>
-          <img src={avatar} className="avatar" alt="user-avatar" />
-          <span className="status"></span>
+    <nav className="ui-left-style">
+      <div className="ui-left-style__user">
+        <button className="ui-account-btn" onClick={toggleAccountMenu}>
+          <img src={avatar} className="ui-avatar" alt="user-avatar" />
+          <span className="ui-status"></span>
           Account
-          <ArrowUp className={`account-menu-arrow ${showAccountMenu ? 'turn' : ''}`} />
+          <ArrowUp className={`ui-account-menu-arrow ${showAccountMenu ? 'ui-turn' : ''}`} />
         </button>
-        <button className="left-style__btn" onClick={toggleSideBarVisibility}>
+        <button className="ui-left-style__btn" onClick={toggleSideBarVisibility}>
           {showSidebar ? <Close /> : <Hamburger />}
         </button>
       </div>
-      <ul className={`account-menu ${showAccountMenu ? 'account-menu--open' : ''}`}>
+      <ul className={`ui-account-menu ${showAccountMenu ? 'ui-account-menu--open' : ''}`}>
         {accountListData.map(({ labelFor, pathTo }, index) => {
           return (
-            <li className="account-menu__item" key={index}>
-              <a href={pathTo} className="account-menu__link" onClick={toggleAccountMenu}>
+            <li className="ui-account-menu__item" key={index}>
+              <a href={pathTo} className="ui-account-menu__link" onClick={toggleAccountMenu}>
                 {labelFor}
               </a>
             </li>
@@ -43,41 +44,43 @@ function SidebarMenu({
       </ul>
       <ul
         className={`${
-          showSidebar ? 'left-style__menu left-style__menu--open' : 'left-style__menu'
+          showSidebar ? 'ui-left-style__menu ui-left-style__menu--open' : 'ui-left-style__menu'
         }`}
       >
         {sidebarData.map(({ icon, text, subNav, link }, index) => {
           const showMenuDropdown =
             text === selectedSubNav
-              ? 'left-style__subnav left-style__subnav--open'
-              : 'left-style__subnav';
+              ? 'ui-left-style__subnav ui-left-style__subnav--open'
+              : 'ui-left-style__subnav';
 
           const selectedSubnavItem = subNav && selectedSubNav && text === selectedSubNav;
           return (
-            <li className="menu-item" key={index}>
+            <li className="ui-menu-item" key={index}>
               <a
                 href="#"
                 onClick={() => toggleSubnav(text)}
-                className={`menu-link ${selectedSubnavItem ? 'focused-link' : ''}`}
+                className={`ui-menu-link ${selectedSubnavItem ? 'ui-focused-link' : ''}`}
               >
                 <span
-                  className={`menu-icon
-                    ${selectedSubnavItem ? 'focused-icon' : ''}`}
+                  className={`ui-menu-icon
+                    ${selectedSubnavItem ? 'ui-focused-icon' : ''}`}
                 >
                   {icon && icon}
                 </span>
-                <span className={`menu-label ${selectedSubnavItem ? 'fade' : ''}`}>{text}</span>
+                <span className={`ui-menu-label ${selectedSubnavItem ? 'ui-fade' : ''}`}>
+                  {text}
+                </span>
                 {subNav && (
                   <ArrowUp
-                    className={`arrow-up ${
-                      selectedSubNav && selectedSubNav === text ? 'rotate' : ''
+                    className={`ui-arrow-up ${
+                      selectedSubNav && selectedSubNav === text ? 'ui-rotate' : ''
                     }`}
                   ></ArrowUp>
                 )}
                 {subNav && (
                   <ArrowRight
-                    className={`arrow-right ${
-                      selectedSubNav && selectedSubNav === text ? 'fade' : ''
+                    className={`ui-arrow-right ${
+                      selectedSubNav && selectedSubNav === text ? 'ui-fade' : ''
                     }`}
                   ></ArrowRight>
                 )}
@@ -86,8 +89,8 @@ function SidebarMenu({
                 <ul className={showMenuDropdown}>
                   {subNav.map(({ path, label }, index) => {
                     return (
-                      <li className="subnav-item" key={index}>
-                        <a href="#" className="subnav-link">
+                      <li className="ui-subnav-item" key={index}>
+                        <a href="#" className="ui-subnav-link">
                           {label}
                         </a>
                       </li>

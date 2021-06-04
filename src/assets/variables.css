@@ -1,0 +1,26 @@
+:root {
+  --ui-white: white;
+
+  --ui-neutral: #f8f8f9;
+  --ui-neutral-100: #f3f4f5;
+  --ui-neutral-200: #e5e7eb;
+  --ui-neutral-300: #88909b;
+  --ui-neutral-400: #6b7280;
+  --ui-neutral-500: #101927;
+
+  --ui-primary: #f2f7ff;
+  --ui-primary-200: #1973fe;
+
+  --ui-secondary: #cce0ff;
+  --ui-secondary-200: #035ae1;
+
+  --ui-success: #2fc68d;
+
+  --ui-warning: #fff8e6;
+  --ui-warning-200: #ffb000;
+
+  --ui-danger: #ffebeb;
+  --ui-danger-200: #db4848;
+
+  --ui-shadow-large: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+}

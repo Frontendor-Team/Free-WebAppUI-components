@@ -1,22 +1,22 @@
-.left-header {
+.ui-left-header {
   position: relative;
   display: flex;
   font-size: 0.75rem;
   line-height: 1.5;
   padding: 0.57rem;
-  background-color: var(--clr-white);
-  border: solid 1px var(--clr-light-grayish-blue);
+  background-color: var(--ui-white);
+  border: solid 1px var(--ui-neutral-200);
   border-radius: 0.3rem;
   cursor: pointer;
   transition: 0.2s all;
 }
 
-.left-header:hover {
-  border-color: var(--clr-bright-blue);
+.ui-left-header:hover {
+  border-color: var(--ui-primary-200);
 }
 
-.left-header__logo {
-  background-color: #2d8eff;
+.ui-left-header__logo {
+  background-color: var(--ui-primary-200);
   padding: 0.57rem;
   border-radius: 0.19rem;
   display: flex;
@@ -24,43 +24,43 @@
   margin-right: 0.75rem;
 }
 
-.left-header__user-info {
+.ui-left-header__user-info {
   font-size: 0.75rem;
   align-self: center;
 }
 
-.username {
+.ui-username {
   font-size: inherit;
-  color: var(--clr-dark);
+  color: var(--ui-neutral-500);
   margin-bottom: 0.13rem;
 }
 
-.page {
+.ui-page {
   font-size: inherit;
-  color: var(--clr-battleship-grey);
+  color: var(--ui-neutral-400);
 }
 
-.left-header__btn {
+.ui-left-header__btn {
   margin-left: auto;
   align-self: center;
   cursor: pointer;
   border: none;
   outline: none;
   background-color: transparent;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   padding-left: 1rem;
   padding-right: 0.2rem;
   transition: 0.2s all;
 }
 
-.left-header:hover .left-header__btn {
-  color: var(--clr-bright-blue);
+.ui-left-header:hover .ui-left-header__btn {
+  color: var(--ui-primary-200);
 }
 
-.unfold path {
+.ui-unfold path {
   stroke: currentColor;
 }
 
-.left-header .dropdown {
+.ui-left-header .ui-dropdown {
   top: 4.25rem;
 }

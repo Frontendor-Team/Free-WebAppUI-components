@@ -1,8 +1,8 @@
-.left-style {
-  background-color: var(--clr-pale-gray);
+.ui-left-style {
+  background-color: var(--ui-neutral-100);
 }
 
-.left-style__user {
+.ui-left-style__user {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@
   padding: 1rem 1.5rem;
 }
 
-.avatar {
+.ui-avatar {
   height: 2.07rem;
   width: 2.07rem;
   border-radius: 50%;
@@ -18,7 +18,7 @@
   object-fit: cover;
 }
 
-.status {
+.ui-status {
   position: absolute;
   width: 0.4rem;
   height: 0.4rem;
@@ -29,7 +29,7 @@
   left: 1.5rem;
 }
 
-.account-btn {
+.ui-account-btn {
   font: inherit;
   background-color: transparent;
   border: none;
@@ -39,15 +39,15 @@
   display: flex;
   align-items: center;
   line-height: 1.54;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   position: relative;
 }
 
-.account-btn:hover {
-  color: var(--clr-battleship-grey);
+.ui-account-btn:hover {
+  color: var(--ui-neutral-400);
 }
 
-.account-menu {
+.ui-account-menu {
   overflow: hidden;
   height: auto;
   list-style: none;
@@ -57,18 +57,18 @@
   transition: 0.2s all;
 }
 
-.showmenu .active,
-.account-menu--active {
+.ui-showmenu .ui-active,
+.ui-account-menu--active {
   max-height: 62.5rem;
 }
 
-.account-menu__item {
+.ui-account-menu__item {
   padding: 0;
 }
 
-.account-menu__link {
+.ui-account-menu__link {
   text-decoration: none;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   padding: 10px 15px;
   width: 100%;
   display: block;
@@ -76,46 +76,46 @@
   transition: 0.2s all;
 }
 
-.account-menu__link:hover,
-.account-menu__link:focus {
-  background: #fafafa;
-  color: #182842;
+.ui-account-menu__link:hover,
+.ui-account-menu__link:focus {
+  background: var(--ui-neutral);
+  color: var(--ui-neutral-500);
 }
 
-.account-menu--open {
+.ui-account-menu--open {
   max-height: 62.5rem;
   padding: 1rem 1.5rem;
-  border-color: var(--clr-light-grayish-blue);
+  border-color: var(--ui-neutral-200);
 }
 
-.left-style__btn {
+.ui-left-style__btn {
   border: none;
   background-color: transparent;
   outline: none;
   cursor: pointer;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   padding-left: 1rem;
 }
 
-.left-style__btn:hover {
-  color: var(--clr-battleship-grey);
+.ui-left-style__btn:hover {
+  color: var(--ui-neutral-400);
 }
 
-.left-style__btn svg,
-.menu-link svg,
-.account-menu-arrow {
+.ui-left-style__btn svg,
+.ui-menu-link svg,
+.ui-account-menu-arrow {
   fill: currentColor;
   width: 1.19rem;
   height: 1.19rem;
 }
 
-.menu-icon {
+.ui-menu-icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.left-style__menu {
+.ui-left-style__menu {
   overflow: hidden;
   transition: 0.3s ease-in-out;
   height: auto;
@@ -123,50 +123,50 @@
   max-height: 0;
 }
 
-.left-style__menu--open {
+.ui-left-style__menu--open {
   max-height: 62.5rem;
 }
 
 /* Subnav styles */
-.menu-link {
+.ui-menu-link {
   display: flex;
   align-items: center;
-  border-top: solid 1px var(--clr-light-grayish-blue);
+  border-top: solid 1px var(--ui-neutral-200);
   padding: 1rem 1.5rem;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   text-decoration: none;
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--clr-battleship-grey);
+.ui-menu-link:hover,
+.ui-menu-link:focus {
+  color: var(--ui-neutral-400);
 }
 
-.menu-label {
+.ui-menu-label {
   margin-left: 0.75rem;
 }
 
-.arrow-up,
-.arrow-right,
-.account-menu-arrow {
+.ui-arrow-up,
+.ui-arrow-right,
+.ui-account-menu-arrow {
   transition: transform 0.2s ease;
   margin-left: auto;
 }
 
-.arrow-up {
+.ui-arrow-up {
   transform: rotate(180deg);
 }
 
-.arrow-right,
-.account-menu-arrow {
+.ui-arrow-right,
+.ui-account-menu-arrow {
   display: none;
 }
 
-.rotate {
+.ui-rotate {
   transform: rotate(0deg);
 }
 
-.left-style__subnav {
+.ui-left-style__subnav {
   overflow: hidden;
   max-height: 0;
   height: auto;
@@ -174,81 +174,80 @@
   transition: 0.4s ease;
 }
 
-.left-style__subnav--open {
-  border-color: var(--clr-light-grayish-blue);
+.ui-left-style__subnav--open {
+  border-color: var(--ui-neutral-200);
   max-height: 62.5rem;
 }
 
-.subnav-item {
+.ui-subnav-item {
   padding: 0 1rem;
-  color: var(--clr-steel);
+  color: var(--ui-neutral-300);
   list-style: none;
-
   padding: 0.25rem 0.88rem;
 }
 
-.subnav-item:first-child {
+.ui-subnav-item:first-child {
   padding-top: 1.4rem;
 }
 
-.subnav-item:last-child {
+.ui-subnav-item:last-child {
   padding-bottom: 1.4rem;
 }
 
-.subnav-link {
-  color: var(--clr-steel);
+.ui-subnav-link {
+  color: var(--ui-neutral-300);
   text-decoration: none;
   display: block;
   padding: 0.69rem 0.75rem 0.69rem 1.5rem;
 }
 
-.subnav-link:hover,
-.subnav-link:focus {
+.ui-subnav-link:hover,
+.ui-subnav-link:focus {
   outline: none;
-  color: var(--clr-battleship-grey);
-  background-color: var(--clr-light-grayish-blue);
+  color: var(--ui-neutral-400);
+  background-color: var(--ui-neutral-200);
   border-radius: 0.3rem;
 }
 
 /********* DESKTOP STYLES ************/
 @media screen and (min-width: 997px) {
-  .left-style {
+  .ui-left-style {
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: var(--clr-grayish-blue);
+    background-color: var(--ui-neutral);
     position: relative;
   }
 
-  .left-style__btn {
+  .ui-left-style__btn {
     display: none;
   }
 
-  .left-style__user {
+  .ui-left-style__user {
     order: 2;
-    border-top: solid 1px var(--clr-light-grayish-blue);
+    border-top: solid 1px var(--ui-neutral-200);
   }
 
-  .left-style__menu {
+  .ui-left-style__menu {
     max-height: 62.5rem;
     padding-top: 0.4rem;
     position: relative;
   }
 
-  .arrow-right,
-  .account-menu-arrow {
+  .ui-arrow-right,
+  .ui-account-menu-arrow {
     display: block;
   }
 
-  .turn {
+  .ui-turn {
     transform: rotate(180deg);
   }
 
-  .account-btn {
+  .ui-account-btn {
     padding: unset;
     width: 100%;
   }
 
-  .account-menu {
+  .ui-account-menu {
     position: absolute;
     left: 1rem;
     right: 1rem;
@@ -257,7 +256,7 @@
     max-height: unset;
     padding: 1rem;
     border-radius: 0.3rem;
-    background-color: var(--clr-white);
+    background-color: var(--ui-white);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     visibility: hidden;
     transform: translateY(0.6rem);
@@ -266,96 +265,96 @@
     z-index: 2;
   }
 
-  .account-menu--open {
+  .ui-account-menu--open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     z-index: 2;
   }
 
-  .account-menu__item {
+  .ui-account-menu__item {
     list-style: none;
   }
 
-  .menu-link {
+  .ui-menu-link {
     border: unset;
     padding: 0;
     align-items: center;
   }
 
-  .menu-link svg {
+  .ui-menu-link svg {
     vertical-align: middle;
   }
 
-  .menu-icon {
+  .ui-menu-icon {
     padding: 0.69rem;
     border-radius: 5px;
   }
 
-  .menu-label {
+  .ui-menu-label {
     padding-top: 0.19rem;
     margin-left: 0.55rem;
   }
 
-  .menu-link:hover,
-  .menu-link:focus {
-    background-color: var(--clr-light-grayish-blue);
+  .ui-menu-link:hover,
+  .ui-menu-link:focus {
+    background-color: var(--ui-neutral-200);
     border-radius: 0.3rem;
   }
 
-  .focused-link:focus {
+  .ui-focused-link:focus {
     background: transparent;
   }
 
-  .focused-icon {
-    background-color: var(--clr-light-grayish-blue);
+  .ui-focused-icon {
+    background-color: var(--ui-neutral-200);
     vertical-align: bottom;
   }
 
-  .menu-item {
+  .ui-menu-item {
     padding: 0.25rem 0.88rem;
   }
 
-  .arrow-up {
+  .ui-arrow-up {
     display: none;
   }
 
-  .arrow-right {
+  .ui-arrow-right {
     margin-right: 0.63rem;
   }
 
-  .left-style__subnav {
+  .ui-left-style__subnav {
     border: none;
     min-width: 0;
     position: absolute;
-    background-color: var(--clr-pale-gray);
+    background-color: var(--ui-neutral-100);
     right: -11rem;
     z-index: 1;
     height: 100%;
     max-height: unset;
     top: 0;
-    border-left: solid 1px var(--clr-light-grayish-blue);
+    border-left: solid 1px var(--ui-neutral-200);
     padding-top: 0.4rem;
   }
 
-  .subnav-item:first-child {
+  .ui-subnav-item:first-child {
     padding-top: 0.25rem;
   }
 
-  .subnav-item {
+  .ui-subnav-item {
     padding: 0.25rem 0.7rem;
   }
 
-  .subnav-link {
+  .ui-subnav-link {
     padding: 0.69rem 0.75rem;
   }
 
-  .left-style__subnav--open {
+  .ui-left-style__subnav--open {
     right: 0;
     min-width: calc(100% - 64px);
   }
 
-  .fade {
+  .ui-fade {
     opacity: 0;
     transition: 0.3s ease;
   }

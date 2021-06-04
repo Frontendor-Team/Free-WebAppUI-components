@@ -1,4 +1,4 @@
-.title {
+.ui-title {
   color: var(--clr-dark);
   padding-top: 1.06rem;
   font-size: 1.3rem;
@@ -8,13 +8,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  .title {
+  .ui-title {
     padding-top: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .flex-order {
+  .ui-flex-order {
     order: -1;
   }
 }

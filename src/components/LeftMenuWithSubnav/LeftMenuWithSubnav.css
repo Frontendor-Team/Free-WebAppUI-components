@@ -1,22 +1,22 @@
-.sidebar-wrapper {
+.ui-sidebar-wrapper {
   box-shadow: 0 8px 60px 0 rgb(0 0 0 / 15%);
-  background-color: var(--clr-grayish-blue);
+  background-color: var(--ui-neutral);
 }
 
-.sidebar-header {
+.ui-sidebar-header {
   padding: 0.8rem 1.06rem;
 }
 
 @media screen and (min-width: 997px) {
-  .sidebar-wrapper {
+  .ui-sidebar-wrapper {
     width: 16rem;
     height: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
   }
 
-  .sidebar-header {
+  .ui-sidebar-header {
     padding: 1.57rem 1.06rem;
-    border-bottom: solid 1px var(--clr-light-grayish-blue);
+    border-bottom: solid 1px var(--ui-neutral-200);
   }
 }

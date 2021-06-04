@@ -1,6 +1,7 @@
 import React from 'react';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
+import '../../assets/variables.css';
 import './LeftMenuWithSubnav.css';
 
 function LeftMenuWithSubnav({
@@ -19,8 +20,8 @@ function LeftMenuWithSubnav({
   toggleDropdown,
 }) {
   return (
-    <div className="sidebar-wrapper">
-      <div className="sidebar-header">
+    <div className="ui-sidebar-wrapper">
+      <div className="ui-sidebar-header">
         <SidebarHeader
           userName={userName}
           dropdownListData={dropdownListData}

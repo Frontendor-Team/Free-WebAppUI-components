@@ -1,25 +1,25 @@
-.search {
+.ui-search {
   display: flex;
   padding: 1.38rem 0;
 }
 
-.search__icon {
+.ui-search__icon {
   margin-right: 0.69rem;
   order: -1;
 }
 
-.search__input {
+.ui-search__input {
   font: inherit;
-  color: var(--clr-bright-blue);
+  color: var(--ui-primary-200);
   border: none;
   outline: none;
   width: 100%;
 }
 
-.search__input::placeholder {
-  color: var(--clr-steel);
+.ui-search__input::placeholder {
+  color: var(--ui-neutral-300);
 }
 
-.search__input:focus ~ svg {
-  fill: var(--clr-bright-blue);
+.ui-search__input:focus ~ svg {
+  fill: var(--ui-primary-200);
 }

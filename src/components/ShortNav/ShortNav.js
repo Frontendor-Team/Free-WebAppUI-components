@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/variables.css';
 import './ShortNav.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Button from '../Button/Button';
@@ -22,18 +23,22 @@ function ShortNav({
   return (
     <Wrapper>
       <SearchBar />
-      <hr className="divider" />
+      <hr className="ui-top-nav__divider" />
       <Container>
-        <div className="short-nav">
-          <div className="short-nav__header">
-            <div className="short-nav__cta">
-              <Button color="dark" usage="short-nav__btn--dark">
+        <div className="ui-short-nav">
+          <div className="ui-short-nav__header">
+            <div className="ui-short-nav__cta">
+              <Button color="primary" usage="ui-short-nav__btn--dark">
                 Add Files
-                <Add className="add-icon" />
+                <Add className="ui-add-icon" />
               </Button>
-              <div class="short-nav__btn--with-dropdown">
-                <Button color="light" usage="short-nav__btn--light" onClick={toggleDropdown}>
-                  <Dots className="dots-icon" />
+              <div class="ui-short-nav__btn--with-dropdown">
+                <Button
+                  color="primary-empty"
+                  usage="ui-short-nav__btn--light"
+                  onClick={toggleDropdown}
+                >
+                  <Dots className="ui-dots-icon" />
                 </Button>
                 <Dropdown
                   dropdownListData={dropdownListData}

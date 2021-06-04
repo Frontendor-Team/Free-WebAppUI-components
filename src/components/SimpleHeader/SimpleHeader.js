@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/variables.css';
 import './SimpleHeader.css';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
@@ -11,13 +12,13 @@ function SimpleHeader({ title }) {
   return (
     <Wrapper>
       <Container>
-        <header className="simple-header">
-          <Button color="light" usage="simple-header__btn">
+        <header className="ui-simple-header">
+          <Button color="primary-empty" usage="ui-simple-header__btn">
             Upgrade Plan
-            <Arrow className="circled-arrow" />
+            <Arrow className="ui-circled-arrow" />
           </Button>
           <Title>{title}</Title>
-          <p className="simple-header__subheading">
+          <p className="ui-simple-header__subheading">
             You have to keep up the pace to accomplish your goals in time.
           </p>
         </header>
