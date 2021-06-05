@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SidebarHeader from './SidebarHeader';
 
 export default {
-  title: 'SidebarHeader',
+  title: '3. Elements/SidebarHeader',
   component: SidebarHeader,
 };
 

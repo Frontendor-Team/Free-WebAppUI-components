@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 
 export default {
-  title: 'Navbar',
+  title: '3. Elements/Navbar',
   component: Navbar,
 };
 

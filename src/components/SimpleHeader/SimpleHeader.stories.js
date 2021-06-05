@@ -2,7 +2,7 @@ import React from 'react';
 import SimpleHeader from './SimpleHeader';
 
 export default {
-  title: 'Top Style/SimpleHeader',
+  title: '1. Top Style/SimpleHeader',
   component: SimpleHeader,
 };
 

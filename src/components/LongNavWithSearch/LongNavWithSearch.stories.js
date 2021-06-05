@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LongNavWithSearch from './LongNavWithSearch';
 
 export default {
-  title: 'Top Style/LongNavWithSearch',
+  title: '1. Top Style/LongNavWithSearch',
   component: LongNavWithSearch,
 };
 

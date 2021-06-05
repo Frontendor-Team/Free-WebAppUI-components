@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ShortNav from './ShortNav';
 
 export default {
-  title: 'Top Style/ShortNav',
+  title: '1. Top Style/ShortNav',
   component: ShortNav,
 };
 

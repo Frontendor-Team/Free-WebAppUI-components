@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LongNav from './LongNav';
 
 export default {
-  title: 'Top Style/LongNav',
+  title: '1. Top Style/LongNav',
   component: LongNav,
 };
 

@@ -9,7 +9,7 @@ import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
 
 export default {
-  title: 'Left style/LeftMenu',
+  title: '2. Left style/LeftMenu',
   component: LeftMenu,
   decorators: [
     (Story) => (

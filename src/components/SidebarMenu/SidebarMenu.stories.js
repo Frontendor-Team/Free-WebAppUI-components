@@ -9,7 +9,7 @@ import { ReactComponent as Onboarding } from '../../assets/Onboarding.svg';
 import { ReactComponent as Settings } from '../../assets/Settings.svg';
 
 export default {
-  title: 'SidebarMenu',
+  title: '3. Elements/SidebarMenu',
   component: SidebarMenu,
 };
 
