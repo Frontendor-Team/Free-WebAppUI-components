@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming';
+import imageFile from '../public/logo.svg';
 
 export default create({
-  brandTitle: "WepAppUI - Web App Components That's Compatible With All CSS Framework",
   brandUrl: 'https://frontendor.com/webappui',
-  brandImage: '/logo.svg',
+  brandImage: imageFile,
 });
